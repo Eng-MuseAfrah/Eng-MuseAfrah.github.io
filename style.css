@@ -94,13 +94,14 @@ nav a:hover {
 
 /* RIGHT IMAGE (CIRCLE) */
 .profile-image img {
-    width: 280px;
-    height: 280px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
     border: 8px solid white;
-    box-shadow: 0 0 40px rgba(255,255,255,0.6);
-    transition: 0.4s;
+    box-shadow: 0 0 40px rgba(255,255,255,0.5);
+    margin-bottom:20px;
+   # transition: 0.4s;
 }
 
 .profile-image img:hover {
