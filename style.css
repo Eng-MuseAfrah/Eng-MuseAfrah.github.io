@@ -56,7 +56,7 @@ nav a:hover {
 
 .profile-container {
     display: flex;
-    align-items: left;
+    align-items: right;
     justify-content: space-between;
     gap: 45px;
 }
