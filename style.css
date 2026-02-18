@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap');
 
 * {
     margin: 0;
@@ -8,19 +8,20 @@
 }
 
 body {
-    background: linear-gradient(135deg, #667eea, #764ba2, #ff6a88);
-    background-size: 300% 300%;
-    animation: gradientMove 10s ease infinite;
+    background: linear-gradient(-45deg, #667eea, #764ba2, #ff6a88, #ffb347);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
     color: white;
-    text-align: center;
 }
 
-@keyframes gradientMove {
+/* Gradient Animation */
+@keyframes gradientBG {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
 }
 
+/* NAVBAR */
 header {
     padding: 20px 10%;
 }
@@ -34,7 +35,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 nav a {
@@ -48,28 +49,36 @@ nav a:hover {
     color: #ffd369;
 }
 
-.hero {
-    padding: 80px 20px;
+/* PROFILE SECTION */
+.profile-section {
+    padding: 100px 10%;
 }
 
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* LEFT TEXT */
+.profile-info h1 {
+    font-size: 42px;
     margin-bottom: 20px;
-    box-shadow: 0 0 30px rgba(255,255,255,0.6);
 }
 
-.hero span {
+.profile-info span {
     color: #ffd369;
 }
 
+.profile-info p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
 .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
+    padding: 12px 28px;
     background: white;
     color: #764ba2;
     border-radius: 30px;
@@ -83,19 +92,35 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+/* RIGHT IMAGE (CIRCLE) */
+.profile-image img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid white;
+    box-shadow: 0 0 40px rgba(255,255,255,0.6);
+    transition: 0.4s;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+}
+
+/* GLASS SECTIONS */
 section {
     margin: 40px auto;
-    padding: 40px 20px;
-    width: 85%;
+    padding: 50px 10%;
     border-radius: 20px;
 }
 
 .glass {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
     box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
+/* SKILLS */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -105,9 +130,9 @@ section {
 }
 
 .skill {
-    padding: 10px 20px;
     background: #ffd369;
     color: #333;
+    padding: 10px 20px;
     border-radius: 20px;
     font-weight: 600;
     transition: 0.3s;
@@ -118,11 +143,27 @@ section {
     transform: translateY(-5px);
 }
 
+/* PROJECTS */
 .project {
     margin-top: 20px;
 }
 
+/* FOOTER */
 footer {
-    margin-top: 40px;
+    text-align: center;
     padding: 20px;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .profile-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .profile-image img {
+        width: 220px;
+        height: 220px;
+    }
 }
