@@ -1,98 +1,170 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-  background: linear-gradient(135deg,#ff6a6a,#9b59b6);
-  color:white;
+body {
+    background: linear-gradient(-45deg, #667eea, #764ba2, #ff6a88, #ffb347);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color: white;
 }
 
-.hero{
-  padding:60px 10%;
+/* Gradient Animation */
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
 
-.container{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
+/* NAVBAR */
+header {
+    padding: 20px 10%;
 }
 
-.left{
-  max-width:600px;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-h1{
-  font-size:48px;
-  margin-bottom:10px;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
-h1 span{
-  color:#ffd166;
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.role{
-  background:#ffd166;
-  color:#333;
-  display:inline-block;
-  padding:8px 16px;
-  border-radius:20px;
-  margin-bottom:20px;
+nav a:hover {
+    color: #ffd369;
 }
 
-.card{
-  background:rgba(255,255,255,0.1);
-  padding:20px;
-  border-radius:15px;
-  margin-bottom:20px;
-  backdrop-filter: blur(10px);
+/* PROFILE SECTION */
+.profile-section {
+    padding: 100px 10%;
 }
 
-.card h2{
-  margin-bottom:10px;
+.profile-container {
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    gap: 45px;
 }
 
-.card button{
-  margin-top:15px;
-  padding:10px 20px;
-  border:none;
-  border-radius:20px;
-  background:white;
-  color:#333;
-  cursor:pointer;
-  font-weight:bold;
+/* LEFT TEXT */
+.profile-info h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
 }
 
-.skills h2{
-  margin-bottom:10px;
+.profile-info span {
+    color: #ffd369;
 }
 
-.tags span{
-  background:#ffd166;
-  color:#333;
-  padding:8px 15px;
-  border-radius:20px;
-  margin:5px;
-  display:inline-block;
-  font-weight:600;
+.profile-info p {
+    font-size: 18px;
+    margin-bottom: 25px;
 }
 
-.right{
-  text-align:center;
+/* BUTTON */
+.btn {
+    padding: 12px 28px;
+    background: white;
+    color: #764ba2;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.right img{
-  width:250px;
-  height:250px;
-  border-radius:50%;
-  border:6px solid white;
-  margin-bottom:20px;
+.btn:hover {
+    background: #ffd369;
+    transform: scale(1.05);
 }
 
-.contact p{
-  margin:5px 0;
-  font-size:16px;
+/* RIGHT IMAGE (CIRCLE) */
+.profile-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid white;
+    box-shadow: 0 0 40px rgba(255,255,255,0.5);
+    margin-bottom:20px;
+   # transition: 0.4s;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+}
+
+/* GLASS SECTIONS */
+section {
+    margin: 40px auto;
+    padding: 50px 10%;
+    border-radius: 20px;
+}
+
+.glass {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* SKILLS */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill {
+    background: #ffd369;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: white;
+    transform: translateY(-5px);
+}
+
+/* PROJECTS */
+.project {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .profile-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .profile-image img {
+        width: 220px;
+        height: 220px;
+    }
 }
