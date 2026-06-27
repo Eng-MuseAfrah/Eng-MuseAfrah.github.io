@@ -1,26 +1,29 @@
-
-const profileImages = [
+const images = [
     "afrah.JPEG",
     "graduation1.jpg",
     "graduation2.jpg"
 ];
 
-let currentImage = 0;
+let current = 0;
 
-const image = document.getElementById("profileImage");
+const img = document.getElementById("profileImage");
 
 setInterval(() => {
 
-    image.style.opacity = "0";
+    img.style.opacity = "0";
 
     setTimeout(() => {
 
-        currentImage = (currentImage + 1) % profileImages.length;
+        current++;
 
-        image.src = profileImages[currentImage];
+        if(current >= images.length){
+            current = 0;
+        }
 
-        image.style.opacity = "1";
+        img.src = images[current];
 
-    }, 400);
+        img.style.opacity = "1";
 
-}, 3000);
+    },400);
+
+},3000);
