@@ -1,7 +1,7 @@
 const images = [
-    "afrah.JPEG",
-    "graduation1.jpg",
-    "graduation2.jpg"
+    "muuse.jpeg.jpeg",
+    "graduation1.jpg.jpeg",
+    "graduation2.jpg.jpeg"
 ];
 
 let current = 0;
