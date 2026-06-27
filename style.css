@@ -400,8 +400,9 @@ color:#d1d5db;
     flex:1;
     display:flex;
     justify-content:flex-end;
-    align-items:flex-start;
-    margin-top:-250px;
+    align-items:center;
+    position:relative;
+    top:-120px; /* kaliya sawirka ayuu kor u qaadayaa */
 }
 
 .image-box{
