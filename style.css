@@ -276,10 +276,12 @@ color:#d1d5db;
 .hero{
     display:flex;
     justify-content:space-between;
-    align-items:center;
-    gap:60px;
-    min-height:100vh;
-    padding-top:120px;
+    align-items:flex-start;
+    gap:70px;
+
+    min-height:auto;   /* halkii 100vh */
+
+    padding:120px 10% 40px;
 }
 
 .hero-content{
