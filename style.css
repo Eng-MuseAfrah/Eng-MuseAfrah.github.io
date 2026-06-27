@@ -276,7 +276,7 @@ color:#d1d5db;
 .hero{
     display:flex;
     justify-content:space-between;
-    align-items:flex-start;
+    align-items:center;
     gap:70px;
 
     min-height:auto;   /* halkii 100vh */
