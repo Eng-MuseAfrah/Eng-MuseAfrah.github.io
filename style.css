@@ -491,6 +491,7 @@ ul{
 
 /* ==============================
    HERO IMAGE
+   GRADUATION CIRCLE
 ============================== */
 
 .hero-image{
@@ -507,31 +508,43 @@ ul{
     top:-100px;
 }
 
+
+/* ==============================
+   CIRCLE IMAGE BOX
+============================== */
+
 .image-box{
-    width:340px;
+    width:380px;
 
-    height:420px;
+    height:380px;
 
-    border-radius:25px;
+    border-radius:50%;
 
     overflow:hidden;
 
-    background:
-        linear-gradient(
-            135deg,
-            #38bdf8,
-            #22c55e
-        );
+    position:relative;
 
-    padding:6px;
+    padding:8px;
 
-    animation:float 5s ease-in-out infinite;
+    background:rgba(255,255,255,.08);
+
+    border:2px solid rgba(56,189,248,.55);
+
+    backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
 
     box-shadow:
-        0 20px 50px rgba(0,0,0,.35);
+        0 20px 50px rgba(0,0,0,.30),
+        0 0 40px rgba(56,189,248,.18);
 
-    position:relative;
+    animation:circleRotate 12s linear infinite;
 }
+
+
+/* ==============================
+   GRADUATION IMAGE
+============================== */
 
 .image-box img{
     width:100%;
@@ -540,28 +553,45 @@ ul{
 
     object-fit:cover;
 
-    border-radius:20px;
+    object-position:center;
+
+    border-radius:50%;
+
+    animation:reverseImageRotate 12s linear infinite;
 
     transition:opacity .8s ease;
 }
 
 
 /* ==============================
-   IMAGE FLOAT
+   CIRCLE ROTATION
 ============================== */
 
-@keyframes float{
+@keyframes circleRotate{
 
-    0%{
-        transform:translateY(0px);
+    from{
+        transform:rotate(0deg);
     }
 
-    50%{
-        transform:translateY(-15px);
+    to{
+        transform:rotate(360deg);
     }
 
-    100%{
-        transform:translateY(0px);
+}
+
+
+/* ==============================
+   KEEP IMAGE STRAIGHT
+============================== */
+
+@keyframes reverseImageRotate{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(-360deg);
     }
 
 }
@@ -569,7 +599,6 @@ ul{
 
 /* ==============================
    AVAILABLE FOR OPPORTUNITIES
-   SQUARE
 ============================== */
 
 .hero-status{
@@ -611,8 +640,7 @@ ul{
 
     z-index:20;
 
-    animation:
-        opportunityFloat 3s ease-in-out infinite;
+    animation:opportunityFloat 3s ease-in-out infinite;
 }
 
 
@@ -636,10 +664,6 @@ ul{
 
 .status-text span{
     display:block;
-
-    opacity:1;
-
-    transform:none;
 
     font-size:13px;
 
@@ -687,8 +711,7 @@ ul{
     box-shadow:
         0 0 0 0 rgba(34,197,94,.7);
 
-    animation:
-        opportunityPulse 1.8s infinite;
+    animation:opportunityPulse 1.8s infinite;
 }
 
 
@@ -1022,11 +1045,6 @@ ul{
         width:100%;
     }
 
-    /*
-       Hello + profile picture
-       mobile-ka dhexda
-    */
-
     .hero-intro{
         justify-content:center;
     }
@@ -1060,15 +1078,10 @@ ul{
     }
 
     .image-box{
-        width:300px;
+        width:320px;
 
-        height:380px;
+        height:320px;
     }
-
-    /*
-       Opportunities square
-       mobile-ka hoosta sawirka
-    */
 
     .hero-status{
         left:50%;
@@ -1116,10 +1129,6 @@ ul{
         gap:35px;
     }
 
-    /*
-       Profile picture
-    */
-
     .hero-intro{
         gap:12px;
     }
@@ -1154,19 +1163,11 @@ ul{
         padding:25px;
     }
 
-    /*
-       Image
-    */
-
     .image-box{
-        width:260px;
+        width:270px;
 
-        height:340px;
+        height:270px;
     }
-
-    /*
-       Opportunities
-    */
 
     .hero-status{
         width:170px;
@@ -1224,7 +1225,7 @@ ul{
     .image-box{
         width:240px;
 
-        height:310px;
+        height:240px;
     }
 
     .hero-status{
