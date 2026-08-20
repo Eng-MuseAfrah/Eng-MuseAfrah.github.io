@@ -48,11 +48,6 @@ body {
     overflow-x: hidden;
 }
 
-
-/* =========================================
-   GENERAL
-========================================= */
-
 section {
     padding: 100px 10%;
     position: relative;
@@ -217,21 +212,24 @@ button {
 
 /* =========================================
    HERO SECTION
-   BACKGROUND IMAGE SHOWS ONLY HERE
+   TEXT LEFT - IMAGE RIGHT
 ========================================= */
 
 .hero {
     min-height: 100vh;
 
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(360px, 0.85fr);
+
     align-items: center;
 
-    gap: 70px;
+    gap: 80px;
 
     padding: 140px 10% 80px;
 
-    /* Background image */
     background-image:
         linear-gradient(
             rgba(15, 23, 42, 0.88),
@@ -249,31 +247,47 @@ button {
 
 /* =========================================
    HERO CONTENT
+   LEFT SIDE
 ========================================= */
 
 .hero-content {
-    flex: 1;
+    min-width: 0;
+
+    text-align: left;
+
     animation: fadeInLeft 1s ease;
 }
 
 .hero-content h3 {
     font-size: 20px;
     font-weight: 600;
+
     color: var(--primary);
+
     margin-bottom: 10px;
 }
 
 .hero-content h1 {
     font-size: clamp(42px, 5vw, 65px);
+
     font-weight: 800;
+
     line-height: 1.15;
+
     margin-bottom: 10px;
+
+    word-wrap: break-word;
 }
 
 .hero-content h2 {
     font-size: clamp(22px, 3vw, 32px);
+
     font-weight: 600;
+
+    line-height: 1.3;
+
     margin-bottom: 22px;
+
     color: var(--text-light);
 }
 
@@ -283,8 +297,11 @@ button {
 
 .hero-content p {
     font-size: 16px;
+
     color: var(--text-light);
+
     max-width: 650px;
+
     margin-bottom: 18px;
 }
 
@@ -295,22 +312,30 @@ button {
 
 .hero-buttons {
     display: flex;
+
     gap: 15px;
+
     flex-wrap: wrap;
+
     margin: 28px 0;
 }
 
 .btn-primary,
 .btn-secondary {
     padding: 13px 25px;
+
     border-radius: 40px;
 
     font-weight: 600;
+
     font-size: 14px;
 
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 9px;
 
     transition: 0.35s;
@@ -318,24 +343,32 @@ button {
 
 .btn-primary {
     background: var(--primary);
+
     color: #fff;
-    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.28);
+
+    box-shadow:
+        0 10px 25px rgba(56, 189, 248, 0.28);
 }
 
 .btn-primary:hover {
     background: var(--secondary);
+
     transform: translateY(-4px);
 }
 
 .btn-secondary {
     background: var(--card-bg);
+
     color: var(--text);
+
     border: 1px solid var(--card-border);
 }
 
 .btn-secondary:hover {
     background: #fff;
+
     color: #0f172a;
+
     transform: translateY(-4px);
 }
 
@@ -346,6 +379,7 @@ button {
 
 .social-icons {
     display: flex;
+
     gap: 12px;
 }
 
@@ -354,12 +388,14 @@ button {
     height: 42px;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
     border-radius: 50%;
 
     background: var(--card-bg);
+
     border: 1px solid var(--card-border);
 
     color: var(--text);
@@ -369,20 +405,27 @@ button {
 
 .social-icons a:hover {
     background: var(--primary);
+
     color: #fff;
+
     transform: translateY(-5px);
 }
 
 
 /* =========================================
    HERO IMAGE
+   RIGHT SIDE
 ========================================= */
 
 .hero-image {
-    flex: 1;
+    min-width: 0;
+
+    width: 100%;
 
     display: flex;
-    justify-content: flex-end;
+
+    justify-content: center;
+
     align-items: center;
 
     position: relative;
@@ -391,23 +434,31 @@ button {
 }
 
 .image-box {
-    width: min(360px, 80vw);
+    width: min(360px, 100%);
+
     height: 450px;
 
     border-radius: 28px;
+
     overflow: hidden;
 
-    background: linear-gradient(
-        135deg,
-        var(--primary),
-        var(--secondary)
-    );
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
 
     padding: 6px;
 
     animation: float 5s ease-in-out infinite;
 
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.35);
+
+    position: relative;
+
+    z-index: 2;
 }
 
 .image-box img {
@@ -415,6 +466,9 @@ button {
     height: 100%;
 
     object-fit: cover;
+
+    object-position: center;
+
     border-radius: 23px;
 
     transition: transform 0.6s ease;
@@ -432,82 +486,117 @@ button {
 .hero-status {
     position: absolute;
 
-    left: -145px;
-    top: 43%;
+    /*
+       Waxaa lagu xiray dhinaca image-ka,
+       mana dhex gelayo sawirka.
+    */
+
+    left: auto;
+
+    right: -40px;
+
+    top: 50%;
 
     transform: translateY(-50%);
 
+    width: 230px;
+
+    min-width: 230px;
+
     display: flex;
+
     align-items: center;
+
     gap: 12px;
 
-    padding: 16px 20px;
-    min-width: 210px;
+    padding: 15px 18px;
 
-    background: rgba(15, 23, 42, 0.88);
+    background: rgba(15, 23, 42, 0.96);
+
     backdrop-filter: blur(16px);
 
+    -webkit-backdrop-filter: blur(16px);
+
     border: 1px solid rgba(56, 189, 248, 0.45);
+
     border-radius: 18px;
 
     box-shadow:
         0 15px 35px rgba(0, 0, 0, 0.35),
         0 0 25px rgba(56, 189, 248, 0.12);
 
-    z-index: 20;
+    z-index: 10;
 
     animation: statusFloat 3s ease-in-out infinite;
 }
 
+
+/* =========================================
+   STATUS DOT
+========================================= */
+
 .status-dot {
     width: 12px;
+
     height: 12px;
+
     min-width: 12px;
 
     background: var(--secondary);
+
     border-radius: 50%;
 
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    box-shadow:
+        0 0 0 0 rgba(34, 197, 94, 0.7);
 
     animation: statusPulse 1.8s infinite;
 }
 
+
+/* =========================================
+   STATUS TEXT
+========================================= */
+
 .status-text {
     display: flex;
+
     flex-direction: column;
+
     align-items: flex-start;
-    line-height: 1.25;
+
+    justify-content: center;
+
+    line-height: 1.35;
+
+    min-width: 0;
 }
 
 .status-text span {
     display: block;
 
-    font-size: 16px;
-    font-weight: 800;
+    opacity: 1;
 
-    letter-spacing: 0.3px;
+    transform: none;
 
-    color: #fff;
+    font-size: 14px;
 
-    opacity: 0;
-    transform: translateX(-20px);
+    font-weight: 700;
 
-    animation: textReveal 4.5s ease-in-out infinite;
+    letter-spacing: 0.2px;
+
+    white-space: nowrap;
 }
 
 .status-text span:nth-child(1) {
     color: var(--primary);
-    animation-delay: 0s;
 }
 
 .status-text span:nth-child(2) {
     color: #ffffff;
-    animation-delay: 0.45s;
 }
 
 .status-text span:nth-child(3) {
     color: var(--secondary);
-    animation-delay: 0.9s;
 }
 
 
@@ -516,45 +605,32 @@ button {
 ========================================= */
 
 @keyframes statusPulse {
+
     0% {
-        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.65);
+        box-shadow:
+            0 0 0 0 rgba(34, 197, 94, 0.65);
     }
 
     70% {
-        box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+        box-shadow:
+            0 0 0 10px rgba(34, 197, 94, 0);
     }
 
     100% {
-        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+        box-shadow:
+            0 0 0 0 rgba(34, 197, 94, 0);
     }
 }
 
 @keyframes statusFloat {
+
     0%,
     100% {
-        transform: translateY(-50%) translateY(0);
+        transform: translateY(-50%);
     }
 
     50% {
-        transform: translateY(-50%) translateY(-10px);
-    }
-}
-
-@keyframes textReveal {
-    0% {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-
-    18%,
-    75% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateX(12px);
+        transform: translateY(calc(-50% - 8px));
     }
 }
 
@@ -565,16 +641,21 @@ button {
 
 .about-container {
     display: flex;
+
     justify-content: center;
 }
 
 .about-card {
+    width: 100%;
+
     max-width: 900px;
+
     padding: 45px;
 
     border-radius: 24px;
 
     background: var(--card-bg);
+
     backdrop-filter: blur(16px);
 
     border: 1px solid var(--card-border);
@@ -586,12 +667,15 @@ button {
 
 .about-card h3 {
     font-size: 28px;
+
     margin-bottom: 18px;
+
     color: var(--primary);
 }
 
 .about-card p {
     margin-bottom: 15px;
+
     color: var(--text-light);
 }
 
@@ -603,7 +687,8 @@ button {
 .skills-grid {
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
 
     gap: 22px;
 }
@@ -614,6 +699,7 @@ button {
     border-radius: 20px;
 
     background: var(--card-bg);
+
     border: 1px solid var(--card-border);
 
     text-align: center;
@@ -625,7 +711,9 @@ button {
 
 .skill-card i {
     font-size: 36px;
+
     margin-bottom: 12px;
+
     color: var(--primary);
 }
 
@@ -635,6 +723,7 @@ button {
 
 .skill-card p {
     font-size: 13px;
+
     color: var(--text-light);
 }
 
@@ -643,7 +732,8 @@ button {
 
     background: rgba(56, 189, 248, 0.13);
 
-    border-color: rgba(56, 189, 248, 0.45);
+    border-color:
+        rgba(56, 189, 248, 0.45);
 }
 
 
@@ -654,7 +744,8 @@ button {
 .projects-grid {
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
 
     gap: 25px;
 }
@@ -665,6 +756,7 @@ button {
     border-radius: 22px;
 
     background: var(--card-bg);
+
     border: 1px solid var(--card-border);
 
     backdrop-filter: blur(12px);
@@ -674,18 +766,24 @@ button {
 
 .project-card:hover {
     transform: translateY(-10px);
-    border-color: rgba(56, 189, 248, 0.45);
+
+    border-color:
+        rgba(56, 189, 248, 0.45);
 }
 
 .project-card h3 {
     color: var(--primary);
+
     font-size: 20px;
+
     margin-bottom: 10px;
 }
 
 .project-card p {
     font-size: 14px;
+
     color: var(--text-light);
+
     margin-bottom: 16px;
 }
 
@@ -697,7 +795,8 @@ button {
 .contact-container {
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
 
     gap: 22px;
 }
@@ -708,6 +807,7 @@ button {
     border-radius: 20px;
 
     background: var(--card-bg);
+
     border: 1px solid var(--card-border);
 
     text-align: center;
@@ -717,7 +817,9 @@ button {
 
 .contact-card i {
     font-size: 30px;
+
     margin-bottom: 12px;
+
     color: var(--secondary);
 }
 
@@ -727,13 +829,17 @@ button {
 
 .contact-card p {
     font-size: 13px;
+
     color: var(--text-light);
+
     word-break: break-word;
 }
 
 .contact-card:hover {
     transform: translateY(-8px);
-    background: rgba(34, 197, 94, 0.12);
+
+    background:
+        rgba(34, 197, 94, 0.12);
 }
 
 
@@ -746,40 +852,50 @@ button {
 
     padding: 60px 10% 30px;
 
-    background: rgba(0, 0, 0, 0.35);
+    background:
+        rgba(0, 0, 0, 0.35);
 
-    border-top: 1px solid var(--card-border);
+    border-top:
+        1px solid var(--card-border);
 }
 
 .footer h2 {
     font-size: 30px;
+
     margin-bottom: 10px;
 }
 
 .footer p {
     color: var(--text-light);
+
     margin-bottom: 15px;
 }
 
 .footer-icons {
     display: flex;
+
     justify-content: center;
+
     gap: 12px;
+
     margin: 22px 0;
 }
 
 .footer-icons a {
     width: 42px;
+
     height: 42px;
 
     display: flex;
 
     justify-content: center;
+
     align-items: center;
 
     border-radius: 50%;
 
     background: var(--card-bg);
+
     border: 1px solid var(--card-border);
 
     color: var(--text);
@@ -789,6 +905,7 @@ button {
 
 .footer-icons a:hover {
     background: var(--primary);
+
     transform: translateY(-5px);
 }
 
@@ -802,6 +919,7 @@ button {
 ========================================= */
 
 @keyframes float {
+
     0%,
     100% {
         transform: translateY(0);
@@ -813,44 +931,73 @@ button {
 }
 
 @keyframes fadeInLeft {
+
     from {
         opacity: 0;
-        transform: translateX(-40px);
+
+        transform:
+            translateX(-40px);
     }
 
     to {
         opacity: 1;
-        transform: translateX(0);
+
+        transform:
+            translateX(0);
     }
 }
 
 @keyframes fadeInRight {
+
     from {
         opacity: 0;
-        transform: translateX(40px);
+
+        transform:
+            translateX(40px);
     }
 
     to {
         opacity: 1;
-        transform: translateX(0);
+
+        transform:
+            translateX(0);
     }
 }
 
 
 /* =========================================
-   TABLET
+   LARGE TABLET
 ========================================= */
 
 @media (max-width: 1100px) {
+
+    .navbar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
     .nav-links {
         gap: 15px;
     }
 
-    .hero-status {
-        left: -45px;
+    .hero {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(320px, 0.8fr);
+
+        gap: 50px;
+
+        padding-left: 7%;
+        padding-right: 7%;
     }
 
+    .hero-status {
+        right: -25px;
+
+        width: 220px;
+
+        min-width: 220px;
+    }
 }
 
 
@@ -864,65 +1011,118 @@ button {
         padding: 80px 7%;
     }
 
+
+    /* NAVIGATION */
+
     .nav-links {
         display: none;
     }
 
+
+    /* HERO */
+
     .hero {
         min-height: auto;
 
-        flex-direction: column;
+        display: grid;
+
+        grid-template-columns: 1fr;
 
         text-align: center;
 
-        padding: 130px 7% 80px;
+        padding:
+            130px 7% 100px;
 
-        gap: 55px;
+        gap: 60px;
     }
+
+
+    /* TEXT */
 
     .hero-content {
         order: 1;
+
+        text-align: center;
     }
 
-    .hero-image {
-        order: 2;
+    .hero-content p {
+        margin-left: auto;
 
-        justify-content: center;
-
-        width: 100%;
+        margin-right: auto;
     }
+
+
+    /* BUTTONS */
 
     .hero-buttons,
     .social-icons {
         justify-content: center;
     }
 
-    .hero-content p {
-        margin-left: auto;
-        margin-right: auto;
+
+    /* IMAGE */
+
+    .hero-image {
+        order: 2;
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        padding-bottom: 80px;
     }
 
+    .image-box {
+        width: min(360px, 85vw);
+
+        height: 450px;
+    }
+
+
+    /*
+       MOBILE:
+       status-ka wuxuu hoos imanayaa sawirka
+    */
+
     .hero-status {
-        left: 10px;
+        left: 50%;
+
         right: auto;
 
         top: auto;
-        bottom: 20px;
 
-        transform: none;
+        bottom: 0;
+
+        transform:
+            translateX(-50%);
+
+        width: 225px;
+
+        min-width: 225px;
+
+        justify-content: flex-start;
     }
 
+
     @keyframes statusFloat {
+
         0%,
         100% {
-            transform: translateY(0);
+            transform:
+                translateX(-50%)
+                translateY(0);
         }
 
         50% {
-            transform: translateY(-8px);
+            transform:
+                translateX(-50%)
+                translateY(-8px);
         }
     }
-
 }
 
 
@@ -942,7 +1142,25 @@ button {
 
     .hire-btn {
         padding: 9px 14px;
+
         font-size: 12px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding:
+            120px 6% 90px;
+
+        gap: 50px;
+    }
+
+
+    /* TEXT */
+
+    .hero-content h3 {
+        font-size: 17px;
     }
 
     .hero-content h1 {
@@ -957,19 +1175,38 @@ button {
         font-size: 14px;
     }
 
+
+    /* BUTTONS */
+
+    .btn-primary,
+    .btn-secondary {
+        padding:
+            12px 20px;
+
+        font-size: 13px;
+    }
+
+
+    /* IMAGE */
+
     .image-box {
         width: 280px;
+
         height: 360px;
     }
 
+
+    /* STATUS */
+
     .hero-status {
-        left: -5px;
-        bottom: 10px;
+        width: 220px;
 
-        padding: 11px 13px;
-        gap: 8px;
+        min-width: 220px;
 
-        min-width: auto;
+        padding:
+            12px 14px;
+
+        gap: 9px;
     }
 
     .status-text span {
@@ -978,23 +1215,44 @@ button {
 
     .status-dot {
         width: 9px;
+
         height: 9px;
 
         min-width: 9px;
     }
 
+
+    /* SECTIONS */
+
     .section-title {
         margin-bottom: 40px;
     }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .section-title p {
+        font-size: 14px;
+    }
+
+
+    /* ABOUT */
 
     .about-card {
         padding: 25px;
     }
 
+    .about-card h3 {
+        font-size: 24px;
+    }
+
+
+    /* CONTACT */
+
     .contact-container {
         grid-template-columns: 1fr;
     }
-
 }
 
 
@@ -1012,9 +1270,27 @@ button {
         padding: 8px 12px;
     }
 
+
+    /* HERO */
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    /* TEXT */
+
     .hero-content h1 {
         font-size: 32px;
     }
+
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+
+    /* BUTTONS */
 
     .hero-buttons {
         flex-direction: column;
@@ -1024,13 +1300,49 @@ button {
         width: 100%;
     }
 
+
+    /* IMAGE */
+
     .image-box {
         width: 240px;
+
         height: 310px;
     }
 
+
+    /* STATUS */
+
     .hero-status {
-        left: -10px;
+        width: 210px;
+
+        min-width: 210px;
+
+        padding:
+            11px 12px;
     }
 
+    .status-text span {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   EXTRA SAFETY
+   Prevent horizontal overflow
+========================================= */
+
+.hero,
+.hero-content,
+.hero-image,
+.about-card,
+.project-card,
+.skill-card,
+.contact-card {
+    max-width: 100%;
+}
+
+.hero-content *,
+.hero-image * {
+    max-width: 100%;
 }
