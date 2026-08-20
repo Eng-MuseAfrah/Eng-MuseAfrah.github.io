@@ -298,7 +298,7 @@ ul{
 
 /* ==============================
    AVAILABLE FOR OPORTUNITIES
-   ANIMATED BLUE BOX
+   TEXT ONLY
 ============================== */
 
 .hero::after{
@@ -337,51 +337,25 @@ ul{
 
     letter-spacing:.5px;
 
-    /* BLUE BACKGROUND */
-    background:
-        linear-gradient(
-            135deg,
-            rgba(30,64,175,.92),
-            rgba(14,116,144,.90)
-        );
+    /* NO BACKGROUND */
+    background:transparent;
 
-    border:2px solid rgba(56,189,248,.75);
+    border:none;
 
-    border-radius:28px;
+    box-shadow:none;
 
-    box-shadow:
-        0 20px 45px rgba(0,0,0,.35),
-        0 0 35px rgba(56,189,248,.30);
+    backdrop-filter:none;
 
-    backdrop-filter:blur(15px);
-
-    -webkit-backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:none;
 
     z-index:10;
 
-    /* 3 DIFFERENT TEXT COLORS */
-    background-image:
-        linear-gradient(
-            135deg,
-            rgba(30,64,175,.92),
-            rgba(14,116,144,.90)
-        ),
-        linear-gradient(
-            to bottom,
-            #ffffff 0%,
-            #ffffff 33.33%,
-            #22c55e 33.34%,
-            #22c55e 66.66%,
-            #facc15 66.67%,
-            #facc15 100%
-        );
-
-    background-origin:border-box;
-
-    animation:availableFloat 3s ease-in-out infinite;
+    color:#fff;
 
     text-shadow:
         0 3px 12px rgba(0,0,0,.25);
+
+    animation:availableTextShow 3s ease forwards;
 
 }
 
@@ -390,30 +364,55 @@ ul{
    AVAILABLE TEXT ANIMATION
 ============================== */
 
-@keyframes availableFloat{
+@keyframes availableTextShow{
 
-    0%,
-    100%{
+    0%{
+
+        opacity:0;
 
         transform:
             translate(-50%,-50%)
-            translateY(0);
-
-        box-shadow:
-            0 20px 45px rgba(0,0,0,.35),
-            0 0 35px rgba(56,189,248,.30);
+            translateX(-80px);
 
     }
 
-    50%{
+    12%{
+
+        opacity:1;
 
         transform:
             translate(-50%,-50%)
-            translateY(-15px);
+            translateX(0);
 
-        box-shadow:
-            0 25px 55px rgba(0,0,0,.40),
-            0 0 50px rgba(56,189,248,.55);
+    }
+
+    30%{
+
+        opacity:1;
+
+        transform:
+            translate(-50%,-50%)
+            translateX(0);
+
+    }
+
+    45%{
+
+        opacity:1;
+
+        transform:
+            translate(-50%,-50%)
+            translateX(0);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+            translate(-50%,-50%)
+            translateX(0);
 
     }
 
@@ -1103,7 +1102,7 @@ ul{
 
         font-size:28px;
 
-        animation:availableMobileFloat 3s ease-in-out infinite;
+        animation:availableMobileShow 3s ease forwards;
 
     }
 
@@ -1118,15 +1117,38 @@ ul{
     }
 
 
-    @keyframes availableMobileFloat{
+    @keyframes availableMobileShow{
 
-        0%,
-        100%{
-            transform:translateY(0);
+        0%{
+
+            opacity:0;
+
+            transform:translateX(-80px);
+
         }
 
-        50%{
-            transform:translateY(-10px);
+        15%{
+
+            opacity:1;
+
+            transform:translateX(0);
+
+        }
+
+        35%{
+
+            opacity:1;
+
+            transform:translateX(0);
+
+        }
+
+        100%{
+
+            opacity:1;
+
+            transform:translateX(0);
+
         }
 
     }
