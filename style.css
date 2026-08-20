@@ -6,21 +6,28 @@
 
 
 /* =========================================
-   RESET & ROOT COLORS
+   ROOT COLORS
 ========================================= */
 
 :root {
     --primary: #38bdf8;
     --primary-dark: #0ea5e9;
     --secondary: #22c55e;
+
     --dark: #0f172a;
-    --dark-light: #1e293b;
     --text: #ffffff;
     --text-light: #cbd5e1;
+
     --card-bg: rgba(255, 255, 255, 0.08);
     --card-border: rgba(255, 255, 255, 0.15);
+
     --shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 }
+
+
+/* =========================================
+   RESET
+========================================= */
 
 * {
     margin: 0;
@@ -37,44 +44,12 @@ html {
 body {
     background:
         linear-gradient(
-            rgba(15, 23, 42, 0.88),
-            rgba(15, 23, 42, 0.88)
+            rgba(15, 23, 42, 0.65),
+            rgba(15, 23, 42, 0.65)
         ),
-        linear-gradient(-45deg,
-            #0f172a,
-            #1e3a8a,
-            #0f766e,
-            #0ea5e9);
+        url("background.jpg");
 
-    background-size: 400% 400%;
-    background-attachment: fixed;
-
-    animation: gradientBG 15s ease infinite;
-
-    color: var(--text);
-    line-height: 1.7;
-    overflow-x: hidden;
-}
-
-
-/* =========================================
-   OPTIONAL BACKGROUND IMAGE
-   To use an image:
-   1. Put your image inside the project folder.
-   2. Example name: background.jpg
-   3. Uncomment the line below and change name.
-========================================= */
-
-/*
-body {
-    background:
-        linear-gradient(
-            rgba(15, 23, 42, 0.55),
-            rgba(15, 23, 42, 0.55)
-        ),
-        url("Aug 20, 2026, 11_20_29 PM (1).png");
-
-    background-size: 20% auto;
+    background-size: 100% auto;
     background-position: center top;
     background-attachment: fixed;
     background-repeat: repeat-y;
@@ -82,50 +57,6 @@ body {
     color: var(--text);
     line-height: 1.7;
     overflow-x: hidden;
-}
-*/
-
-
-/* =========================================
-   DARK / LIGHT MODE
-========================================= */
-
-body.light-mode {
-    --dark: #f8fafc;
-    --dark-light: #ffffff;
-    --text: #0f172a;
-    --text-light: #475569;
-    --card-bg: rgba(255, 255, 255, 0.78);
-    --card-border: rgba(15, 23, 42, 0.10);
-
-    background:
-        linear-gradient(
-            rgba(241, 245, 249, 0.90),
-            rgba(224, 242, 254, 0.90)
-        );
-    color: var(--text);
-}
-
-body.light-mode .header {
-    background: rgba(255, 255, 255, 0.80);
-    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-}
-
-body.light-mode .logo,
-body.light-mode .nav-links a {
-    color: #0f172a;
-}
-
-body.light-mode .section-title p,
-body.light-mode .hero-content p,
-body.light-mode .about-card p,
-body.light-mode .skill-card p,
-body.light-mode .project-card p,
-body.light-mode .contact-card p,
-body.light-mode .footer p,
-body.light-mode .education-content p,
-body.light-mode .experience-content p {
-    color: #475569;
 }
 
 
@@ -157,25 +88,6 @@ button {
 
 
 /* =========================================
-   BACKGROUND ANIMATION
-========================================= */
-
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-
-/* =========================================
    HEADER
 ========================================= */
 
@@ -187,10 +99,10 @@ button {
     width: 100%;
     z-index: 1000;
 
-    background: rgba(15, 23, 42, 0.72);
+    background: rgba(15, 23, 42, 0.78);
     backdrop-filter: blur(18px);
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 
@@ -201,6 +113,7 @@ button {
 .navbar {
     max-width: 1300px;
     margin: auto;
+
     padding: 16px 30px;
 
     display: flex;
@@ -228,8 +141,8 @@ button {
 
 .nav-links {
     display: flex;
-    gap: 24px;
     align-items: center;
+    gap: 24px;
 }
 
 .nav-links a {
@@ -237,8 +150,8 @@ button {
     font-size: 14px;
     font-weight: 500;
 
-    transition: 0.3s;
     position: relative;
+    transition: 0.3s;
 }
 
 .nav-links a::after {
@@ -267,40 +180,6 @@ button {
 
 
 /* =========================================
-   NAV ACTIONS / THEME BUTTON
-========================================= */
-
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.theme-toggle {
-    width: 42px;
-    height: 42px;
-
-    border: 1px solid var(--card-border);
-    border-radius: 50%;
-
-    background: var(--card-bg);
-    color: var(--text);
-
-    cursor: pointer;
-    transition: 0.35s;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.theme-toggle:hover {
-    background: var(--primary);
-    transform: rotate(15deg);
-}
-
-
-/* =========================================
    HIRE BUTTON
 ========================================= */
 
@@ -308,12 +187,12 @@ button {
     padding: 11px 22px;
 
     background: var(--primary);
+    color: #fff;
+
     border-radius: 40px;
 
     font-weight: 600;
     font-size: 14px;
-
-    color: #fff;
 
     transition: 0.35s;
 
@@ -335,21 +214,9 @@ button {
     margin-bottom: 55px;
 }
 
-.section-tag {
-    display: inline-block;
-
-    color: var(--primary);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 2px;
-
-    margin-bottom: 8px;
-}
-
 .section-title h2 {
     font-size: clamp(30px, 4vw, 44px);
     font-weight: 800;
-
     margin-bottom: 8px;
 }
 
@@ -380,27 +247,18 @@ button {
     animation: fadeInLeft 1s ease;
 }
 
-.hero-greeting {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    color: var(--primary) !important;
+.hero-content h3 {
+    font-size: 20px;
     font-weight: 600;
-
-    margin-bottom: 10px !important;
+    color: var(--primary);
+    margin-bottom: 10px;
 }
 
 .hero-content h1 {
     font-size: clamp(42px, 5vw, 65px);
     font-weight: 800;
     line-height: 1.15;
-
     margin-bottom: 10px;
-}
-
-.hero-content h1 span {
-    color: var(--primary);
 }
 
 .hero-content h2 {
@@ -408,6 +266,7 @@ button {
     font-weight: 600;
 
     margin-bottom: 22px;
+
     color: var(--text-light);
 }
 
@@ -415,12 +274,13 @@ button {
     color: var(--primary);
 }
 
-.hero-description {
+.hero-content p {
     font-size: 16px;
     color: var(--text-light);
 
     max-width: 650px;
-    margin-bottom: 18px !important;
+
+    margin-bottom: 18px;
 }
 
 
@@ -439,6 +299,7 @@ button {
 .btn-primary,
 .btn-secondary {
     padding: 13px 25px;
+
     border-radius: 40px;
 
     font-weight: 600;
@@ -472,8 +333,8 @@ button {
 }
 
 .btn-secondary:hover {
-    background: var(--text);
-    color: var(--dark);
+    background: #fff;
+    color: #0f172a;
     transform: translateY(-4px);
 }
 
@@ -554,7 +415,6 @@ button {
     height: 100%;
 
     object-fit: cover;
-
     border-radius: 23px;
 
     transition: transform 0.6s ease;
@@ -566,13 +426,17 @@ button {
 
 
 /* =========================================
-   HERO STATUS - 3 LINES
+   AVAILABLE FOR OPPORTUNITIES
+   LEFT SIDE OF THE IMAGE
 ========================================= */
 
 .hero-status {
     position: absolute;
 
-    right: -85px;
+    /* LEFT SIDE */
+    left: -95px;
+
+    /* Vertical center */
     top: 50%;
 
     transform: translateY(-50%);
@@ -581,17 +445,21 @@ button {
     align-items: center;
     gap: 12px;
 
-    padding: 15px 18px;
+    padding: 16px 20px;
 
-    background: rgba(15, 23, 42, 0.85);
-    backdrop-filter: blur(15px);
+    min-width: 185px;
 
-    border: 1px solid rgba(56, 189, 248, 0.35);
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(56, 189, 248, 0.45);
     border-radius: 18px;
 
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.30);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(56, 189, 248, 0.12);
 
-    z-index: 10;
+    z-index: 20;
 
     animation: statusFloat 3s ease-in-out infinite;
 }
@@ -605,7 +473,7 @@ button {
     background: var(--secondary);
     border-radius: 50%;
 
-    box-shadow: 0 0 0 rgba(34, 197, 94, 0.6);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
 
     animation: statusPulse 1.8s infinite;
 }
@@ -613,6 +481,7 @@ button {
 .status-text {
     display: flex;
     flex-direction: column;
+
     align-items: flex-start;
 
     line-height: 1.25;
@@ -629,8 +498,7 @@ button {
     color: #fff;
 
     opacity: 0;
-
-    transform: translateX(-18px);
+    transform: translateX(-20px);
 
     animation: textReveal 4.5s ease-in-out infinite;
 }
@@ -641,7 +509,7 @@ button {
 }
 
 .status-text span:nth-child(2) {
-    color: #fff;
+    color: #ffffff;
     animation-delay: 0.45s;
 }
 
@@ -651,11 +519,10 @@ button {
 }
 
 
-/* =========================================
-   HERO STATUS ANIMATIONS
-========================================= */
+/* STATUS ANIMATION */
 
 @keyframes statusPulse {
+
     0% {
         box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.65);
     }
@@ -667,26 +534,30 @@ button {
     100% {
         box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
     }
+
 }
 
 @keyframes statusFloat {
+
     0%,
     100% {
         transform: translateY(-50%) translateY(0);
     }
 
     50% {
-        transform: translateY(-50%) translateY(-8px);
+        transform: translateY(-50%) translateY(-10px);
     }
+
 }
 
 @keyframes textReveal {
+
     0% {
         opacity: 0;
-        transform: translateX(-18px);
+        transform: translateX(-20px);
     }
 
-    15%,
+    18%,
     75% {
         opacity: 1;
         transform: translateX(0);
@@ -694,13 +565,14 @@ button {
 
     100% {
         opacity: 0;
-        transform: translateX(10px);
+        transform: translateX(12px);
     }
+
 }
 
 
 /* =========================================
-   ABOUT SECTION
+   ABOUT
 ========================================= */
 
 .about-container {
@@ -725,28 +597,9 @@ button {
     text-align: center;
 }
 
-.about-icon {
-    width: 70px;
-    height: 70px;
-
-    margin: 0 auto 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: rgba(56, 189, 248, 0.15);
-
-    color: var(--primary);
-    font-size: 28px;
-}
-
 .about-card h3 {
     font-size: 28px;
     margin-bottom: 18px;
-
     color: var(--primary);
 }
 
@@ -755,165 +608,10 @@ button {
     color: var(--text-light);
 }
 
-.about-highlights {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 12px;
-
-    margin: 25px 0;
-}
-
-.highlight-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-
-    padding: 12px;
-
-    background: rgba(255, 255, 255, 0.05);
-
-    border-radius: 12px;
-}
-
-.highlight-item i {
-    color: var(--primary);
-}
-
 
 /* =========================================
-   EDUCATION
+   SKILLS
 ========================================= */
-
-.education-container,
-.experience-container {
-    max-width: 900px;
-    margin: auto;
-}
-
-.education-card,
-.experience-card {
-    display: flex;
-    gap: 25px;
-
-    padding: 35px;
-
-    border-radius: 24px;
-
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-
-    backdrop-filter: blur(15px);
-
-    box-shadow: var(--shadow);
-
-    transition: 0.35s;
-}
-
-.education-card:hover,
-.experience-card:hover {
-    transform: translateY(-7px);
-}
-
-.education-icon,
-.experience-icon {
-    width: 70px;
-    height: 70px;
-
-    min-width: 70px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 18px;
-
-    background: rgba(56, 189, 248, 0.15);
-
-    color: var(--primary);
-    font-size: 30px;
-}
-
-.education-date,
-.experience-date {
-    color: var(--secondary);
-    font-weight: 700;
-    font-size: 14px;
-}
-
-.education-content h3,
-.experience-content h3 {
-    font-size: 25px;
-    margin: 5px 0;
-}
-
-.education-content h4,
-.experience-content h4 {
-    color: var(--primary);
-    margin-bottom: 12px;
-}
-
-.education-content p,
-.experience-content p {
-    color: var(--text-light);
-}
-
-.education-skills,
-.project-tech,
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-
-    margin-top: 18px;
-}
-
-.education-skills span,
-.project-tech span,
-.project-tags span {
-    padding: 6px 12px;
-
-    border-radius: 30px;
-
-    background: rgba(56, 189, 248, 0.13);
-
-    border: 1px solid rgba(56, 189, 248, 0.22);
-
-    color: var(--primary);
-
-    font-size: 12px;
-    font-weight: 600;
-}
-
-
-/* =========================================
-   SKILLS SECTION
-========================================= */
-
-.skills-category {
-    margin-bottom: 45px;
-}
-
-.category-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 10px;
-
-    margin-bottom: 22px;
-}
-
-.category-header i {
-    color: var(--primary);
-    font-size: 24px;
-}
-
-.category-header h3 {
-    font-size: 24px;
-}
 
 .skills-grid {
     display: grid;
@@ -947,8 +645,7 @@ button {
     color: var(--primary);
 }
 
-.skill-card h4 {
-    font-size: 18px;
+.skill-card h3 {
     margin-bottom: 8px;
 }
 
@@ -967,126 +664,7 @@ button {
 
 
 /* =========================================
-   FEATURED PROJECT
-========================================= */
-
-.featured-project-container {
-    max-width: 1050px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: 220px 1fr;
-
-    gap: 45px;
-
-    align-items: center;
-
-    padding: 45px;
-
-    border-radius: 28px;
-
-    background: var(--card-bg);
-
-    border: 1px solid var(--card-border);
-
-    backdrop-filter: blur(16px);
-
-    box-shadow: var(--shadow);
-}
-
-.featured-project-icon {
-    width: 190px;
-    height: 190px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin: auto;
-
-    border-radius: 50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(56, 189, 248, 0.22),
-            rgba(34, 197, 94, 0.22)
-        );
-
-    color: var(--primary);
-
-    font-size: 75px;
-
-    animation: float 5s ease-in-out infinite;
-}
-
-.featured-badge {
-    display: inline-flex;
-    gap: 8px;
-    align-items: center;
-
-    padding: 7px 14px;
-
-    border-radius: 30px;
-
-    background: rgba(34, 197, 94, 0.14);
-
-    color: var(--secondary);
-
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.featured-project-content h3 {
-    font-size: 32px;
-    margin: 14px 0;
-}
-
-.featured-project-content p {
-    color: var(--text-light);
-    margin-bottom: 14px;
-}
-
-.project-features {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 12px;
-
-    margin: 25px 0;
-}
-
-.feature-item {
-    display: flex;
-    align-items: center;
-
-    gap: 10px;
-
-    padding: 12px;
-
-    background: rgba(255, 255, 255, 0.05);
-
-    border-radius: 12px;
-
-    font-size: 13px;
-}
-
-.feature-item i {
-    color: var(--secondary);
-}
-
-.project-buttons {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-
-    margin-top: 25px;
-}
-
-
-/* =========================================
-   OTHER PROJECTS
+   PROJECTS
 ========================================= */
 
 .projects-grid {
@@ -1117,24 +695,6 @@ button {
     border-color: rgba(56, 189, 248, 0.45);
 }
 
-.project-icon {
-    width: 55px;
-    height: 55px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 15px;
-
-    background: rgba(56, 189, 248, 0.14);
-
-    color: var(--primary);
-    font-size: 23px;
-
-    margin-bottom: 18px;
-}
-
 .project-card h3 {
     color: var(--primary);
 
@@ -1151,122 +711,10 @@ button {
     margin-bottom: 16px;
 }
 
-.project-link {
-    display: inline-flex;
-    align-items: center;
-
-    gap: 8px;
-
-    margin-top: 22px;
-
-    color: var(--primary);
-
-    font-weight: 700;
-
-    transition: 0.3s;
-}
-
-.project-link:hover {
-    color: var(--secondary);
-    gap: 13px;
-}
-
-
-/* =========================================
-   EXPERIENCE
-========================================= */
-
-.experience-content ul {
-    list-style: disc;
-
-    padding-left: 20px;
-
-    margin-top: 15px;
-
-    color: var(--text-light);
-}
-
-.experience-content li {
-    margin-bottom: 7px;
-}
-
-
-/* =========================================
-   CERTIFICATIONS
-========================================= */
-
-.certifications-grid {
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-
-    gap: 25px;
-}
-
-.certification-card {
-    padding: 30px;
-
-    border-radius: 22px;
-
-    background: var(--card-bg);
-
-    border: 1px solid var(--card-border);
-
-    text-align: center;
-
-    backdrop-filter: blur(12px);
-
-    transition: 0.35s;
-}
-
-.certification-card:hover {
-    transform: translateY(-8px);
-
-    border-color: rgba(56, 189, 248, 0.45);
-}
-
-.certification-icon {
-    width: 65px;
-    height: 65px;
-
-    margin: 0 auto 18px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: rgba(56, 189, 248, 0.15);
-
-    color: var(--primary);
-
-    font-size: 26px;
-}
-
-.certification-card h3 {
-    margin-bottom: 10px;
-}
-
-.certification-card p {
-    color: var(--text-light);
-    font-size: 14px;
-}
-
 
 /* =========================================
    CONTACT
 ========================================= */
-
-.contact-intro {
-    max-width: 700px;
-
-    margin: -25px auto 35px;
-
-    text-align: center;
-
-    color: var(--text-light);
-}
 
 .contact-container {
     display: grid;
@@ -1286,8 +734,6 @@ button {
     border: 1px solid var(--card-border);
 
     text-align: center;
-
-    color: var(--text);
 
     transition: 0.35s;
 }
@@ -1318,32 +764,6 @@ button {
     background: rgba(34, 197, 94, 0.12);
 }
 
-.contact-cv {
-    max-width: 750px;
-
-    margin: 55px auto 0;
-
-    padding: 40px;
-
-    text-align: center;
-
-    border-radius: 24px;
-
-    background: rgba(56, 189, 248, 0.10);
-
-    border: 1px solid rgba(56, 189, 248, 0.25);
-}
-
-.contact-cv h3 {
-    font-size: 25px;
-    margin-bottom: 10px;
-}
-
-.contact-cv p {
-    color: var(--text-light);
-    margin-bottom: 22px;
-}
-
 
 /* =========================================
    FOOTER
@@ -1354,32 +774,19 @@ button {
 
     padding: 60px 10% 30px;
 
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.35);
 
     border-top: 1px solid var(--card-border);
 }
 
-.footer-content {
-    max-width: 900px;
-    margin: auto;
-}
-
-.footer-logo {
+.footer h2 {
     font-size: 30px;
-
-    font-weight: 800;
-
-    color: var(--text);
+    margin-bottom: 10px;
 }
 
-.footer-logo span {
-    color: var(--primary);
-}
-
-.footer-description {
+.footer p {
     color: var(--text-light);
-
-    margin: 15px 0;
+    margin-bottom: 15px;
 }
 
 .footer-icons {
@@ -1418,36 +825,8 @@ button {
     transform: translateY(-5px);
 }
 
-.footer-links {
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 18px;
-
-    margin: 20px 0;
-}
-
-.footer-links a {
-    color: var(--text-light);
-
-    font-size: 14px;
-
-    transition: 0.3s;
-}
-
-.footer-links a:hover {
-    color: var(--primary);
-}
-
 .copyright {
-    color: var(--text-light);
-
     font-size: 13px;
-
-    margin-top: 25px;
 }
 
 
@@ -1456,6 +835,7 @@ button {
 ========================================= */
 
 @keyframes float {
+
     0%,
     100% {
         transform: translateY(0);
@@ -1464,9 +844,11 @@ button {
     50% {
         transform: translateY(-14px);
     }
+
 }
 
 @keyframes fadeInLeft {
+
     from {
         opacity: 0;
         transform: translateX(-40px);
@@ -1476,9 +858,11 @@ button {
         opacity: 1;
         transform: translateX(0);
     }
+
 }
 
 @keyframes fadeInRight {
+
     from {
         opacity: 0;
         transform: translateX(40px);
@@ -1488,11 +872,12 @@ button {
         opacity: 1;
         transform: translateX(0);
     }
+
 }
 
 
 /* =========================================
-   TABLET RESPONSIVE
+   TABLET
 ========================================= */
 
 @media (max-width: 1100px) {
@@ -1502,18 +887,14 @@ button {
     }
 
     .hero-status {
-        right: -40px;
-    }
-
-    .navbar {
-        padding: 15px 20px;
+        left: -45px;
     }
 
 }
 
 
 /* =========================================
-   MOBILE / TABLET RESPONSIVE
+   TABLET & MOBILE
 ========================================= */
 
 @media (max-width: 900px) {
@@ -1550,22 +931,21 @@ button {
         width: 100%;
     }
 
-    .hero-greeting,
+    .hero-buttons,
     .social-icons {
         justify-content: center;
     }
 
-    .hero-description {
+    .hero-content p {
         margin-left: auto;
         margin-right: auto;
     }
 
-    .hero-buttons {
-        justify-content: center;
-    }
-
+    /* MOBILE: STATUS LEFT-BOTTOM */
     .hero-status {
-        right: 10px;
+        left: 10px;
+        right: auto;
+
         top: auto;
         bottom: 20px;
 
@@ -1573,31 +953,16 @@ button {
     }
 
     @keyframes statusFloat {
+
         0%,
         100% {
             transform: translateY(0);
         }
 
         50% {
-            transform: translateY(-7px);
+            transform: translateY(-8px);
         }
-    }
 
-    .featured-project-container {
-        grid-template-columns: 1fr;
-
-        text-align: center;
-    }
-
-    .project-features {
-        grid-template-columns: 1fr;
-
-        text-align: left;
-    }
-
-    .project-tech,
-    .project-buttons {
-        justify-content: center;
     }
 
 }
@@ -1622,15 +987,6 @@ button {
         font-size: 12px;
     }
 
-    .theme-toggle {
-        width: 38px;
-        height: 38px;
-    }
-
-    .nav-actions {
-        gap: 7px;
-    }
-
     .hero-content h1 {
         font-size: 38px;
     }
@@ -1639,7 +995,7 @@ button {
         font-size: 22px;
     }
 
-    .hero-description {
+    .hero-content p {
         font-size: 14px;
     }
 
@@ -1649,11 +1005,13 @@ button {
     }
 
     .hero-status {
-        right: -5px;
+        left: -5px;
         bottom: 10px;
 
         padding: 11px 13px;
         gap: 8px;
+
+        min-width: auto;
     }
 
     .status-text span {
@@ -1663,6 +1021,7 @@ button {
     .status-dot {
         width: 9px;
         height: 9px;
+
         min-width: 9px;
     }
 
@@ -1670,51 +1029,11 @@ button {
         margin-bottom: 40px;
     }
 
-    .about-card,
-    .education-card,
-    .experience-card,
-    .featured-project-container,
-    .contact-cv {
+    .about-card {
         padding: 25px;
     }
 
-    .about-highlights {
-        grid-template-columns: 1fr;
-    }
-
-    .education-card,
-    .experience-card {
-        flex-direction: column;
-
-        text-align: center;
-    }
-
-    .education-icon,
-    .experience-icon {
-        margin: auto;
-    }
-
-    .education-skills {
-        justify-content: center;
-    }
-
-    .experience-content ul {
-        text-align: left;
-    }
-
-    .featured-project-content h3 {
-        font-size: 25px;
-    }
-
-    .featured-project-icon {
-        width: 150px;
-        height: 150px;
-
-        font-size: 55px;
-    }
-
-    .contact-container,
-    .certifications-grid {
+    .contact-container {
         grid-template-columns: 1fr;
     }
 
@@ -1729,10 +1048,6 @@ button {
 
     .logo {
         font-size: 20px;
-    }
-
-    .theme-toggle {
-        display: none;
     }
 
     .hire-btn {
@@ -1757,7 +1072,7 @@ button {
     }
 
     .hero-status {
-        right: -10px;
+        left: -10px;
     }
 
 }
