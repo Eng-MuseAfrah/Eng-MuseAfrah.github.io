@@ -237,7 +237,7 @@ button {
             rgba(15, 23, 42, 0.88),
             rgba(15, 23, 42, 0.88)
         ),
-        url("background.jpg");
+        url("Aug 20, 2026, 11_20_29 PM (1).png");
 
     background-size: cover;
     background-position: center;
@@ -432,8 +432,8 @@ button {
 .hero-status {
     position: absolute;
 
-    left: -95px;
-    top: 50%;
+    left: -145px;
+    top: 43%;
 
     transform: translateY(-50%);
 
@@ -442,7 +442,7 @@ button {
     gap: 12px;
 
     padding: 16px 20px;
-    min-width: 185px;
+    min-width: 210px;
 
     background: rgba(15, 23, 42, 0.88);
     backdrop-filter: blur(16px);
