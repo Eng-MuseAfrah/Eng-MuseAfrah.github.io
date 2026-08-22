@@ -3,19 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Muse Ahmed Afrah | Junior Full Stack Developer</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Official Portfolio of Muse Ahmed Afrah - Junior Software Developer, Flutter Developer, and Full Stack Developer.">
+        content="Muse Ahmed Afrah - Junior Full Stack Developer Portfolio">
 
     <meta name="keywords"
-        content="Muse Ahmed Afrah, Portfolio, Junior Software Developer, Flutter Developer, Java, Python, Web Developer, Full Stack Developer">
+        content="Muse Ahmed Afrah, Full Stack Developer, Flutter Developer, Software Developer, Portfolio">
 
-    <meta name="author" content="Muse Ahmed Afrah">
+    <meta name="author"
+        content="Muse Ahmed Afrah">
+
+    <title>Muse Afrah | Junior Full Stack Developer</title>
 
     <!-- Google Font -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
@@ -23,40 +33,109 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+        href="style.css">
 </head>
+
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+
+    <!-- =====================================================
+                         HEADER / NAVBAR
+    ====================================================== -->
+
     <header class="header">
 
         <nav class="navbar">
 
-            <a href="#home" class="logo">
+            <!-- Logo -->
+            <a href="#home"
+                class="logo">
+
                 Muse<span>Afrah</span>
+
             </a>
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open Menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- Navigation -->
+            <ul class="nav-links"
+                id="navLinks">
+
+                <li>
+                    <a href="#home"
+                        class="active">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#education">
+                        Education
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#skills">
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projects">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#experience">
+                        Experience
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+
             </ul>
 
+
+            <!-- Navbar Actions -->
             <div class="nav-actions">
 
-                <!-- Dark / Light Mode Button -->
-                <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <button id="themeToggle"
+                    class="theme-toggle"
+                    aria-label="Toggle Theme">
+
                     <i class="fa-solid fa-moon"></i>
+
                 </button>
 
-                <a href="#contact" class="hire-btn">
+
+                <a href="#contact"
+                    class="hire-btn">
+
                     Hire Me
+
                 </a>
 
             </div>
@@ -66,806 +145,1825 @@
     </header>
 
 
-    <!-- ================= HERO ================= -->
-    <section class="hero" id="home">
 
-        <!-- LEFT SIDE -->
-        <div class="hero-content">
+    <!-- =====================================================
+                            HERO SECTION
+    ====================================================== -->
 
-            <p class="hero-greeting">
-                <i class="fa-solid fa-hand"></i> Hello, I'm
-            </p>
+    <main>
 
-            <h1>Muse Ahmed <span>Afrah</span></h1>
-
-            <h2>
-                Junior
-                <span>Full Stack Developer</span>
-            </h2>
-
-            <p class="hero-description">
-                Computer Science graduate passionate about building modern,
-                responsive, and scalable mobile applications, web applications,
-                and software solutions.
-            </p>
-
-            <p class="hero-description">
-                I enjoy solving real-world problems through clean code,
-                intuitive user interfaces, modern technologies, and
-                well-structured software systems.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#projects" class="btn-primary">
-                    <i class="fa-solid fa-code"></i>
-                    View Projects
-                </a>
-
-                <!-- Change CV.pdf to your actual CV file name -->
-                <a href="MUSEAHMED-CV.pdf" download class="btn-secondary">
-                    <i class="fa-solid fa-file-arrow-down"></i>
-                    Download CV
-                </a>
-
-            </div>
-
-            <div class="social-icons">
-
-                <a href="https://github.com/Eng-museafrah.github.io" target="_blank"
-                    aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-
-                <a href="https://www.linkedin.com/in/Muse-Ahmed-Afrah/" target="_blank"
-                    aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-
-                <a href="https://www.facebook.com/MuseAhmedAdde" target="_blank"
-                    aria-label="Facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
-
-                <a href="https://www.instagram.com/muze_afrah/" target="_blank"
-                    aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-
-            </div>
-
-        </div>
+        <section class="hero"
+            id="home">
 
 
-        <!-- RIGHT SIDE -->
-        <div class="hero-image">
+            <!-- Background Decoration -->
+            <div class="hero-bg-circle circle-one"></div>
 
-            <div class="image-decoration decoration-one"></div>
-            <div class="image-decoration decoration-two"></div>
+            <div class="hero-bg-circle circle-two"></div>
 
-            <div class="image-box">
+            <div class="hero-bg-dots dots-one"></div>
 
-                <!-- KEEPING YOUR ORIGINAL IMAGE LINK -->
-                <img id="profileImage"
-                    src="muuse.jpeg.jpeg"
-                    alt="Muse Ahmed Afrah - Junior Full Stack Developer">
-
-<div class="hero-status">
-    <span class="status-dot"></span>
-
-    <div class="status-text">
-        <span>Available</span>
-        <span>For</span>
-        <span>Opportunities</span>
-
-</div>
-
-        </div>
-
-    </section>
+            <div class="hero-bg-dots dots-two"></div>
 
 
-    <!-- ================= ABOUT ================= -->
-    <section id="about" class="about">
+            <!-- =================================================
+                              HERO LEFT
+            ================================================== -->
 
-        <div class="section-title">
-            <span class="section-tag"></span>
-            <h2>About me</h2>
-            <p>Who I Am & What I Do</p>
-        </div>
+            <div class="hero-content">
 
-        <div class="about-container">
+                <p class="hero-greeting">
 
-            <div class="about-card">
+                    <span class="hello-icon">
+                        <i class="fa-solid fa-hand"></i>
+                    </span>
 
-                <div class="about-icon">
-                    <i class="fa-solid fa-user-tie"></i>
-                </div>
+                    Hello, I'm
 
-                <h3>Junior Software Developer</h3>
-
-                <p>
-                    I am a Computer Science graduate from SIMAD University with
-                    knowledge of software development, mobile application development,
-                    databases, system analysis, and problem solving.
                 </p>
 
-                <p>
-                    My main interest is building high-quality software solutions that are
-                    fast, responsive, user-friendly, and scalable. I enjoy turning ideas
-                    and real-world problems into practical digital solutions.
+
+                <h1>
+
+                    Muse Ahmed
+
+                    <span>
+                        Afrah
+                    </span>
+
+                </h1>
+
+
+                <h2>
+
+                    Junior
+
+                    <span>
+                        Full Stack Developer
+                    </span>
+
+                </h2>
+
+
+                <p class="hero-description">
+
+                    Computer Science graduate passionate about building
+                    modern, responsive, and scalable web applications,
+                    mobile applications, and software solutions.
+
                 </p>
 
-                <p>
-                    I continuously improve my technical skills by learning modern
-                    technologies, following software development best practices,
-                    and building real-world projects.
+
+                <p class="hero-description">
+
+                    I enjoy solving real-world problems through clean code,
+                    intuitive user interfaces, modern technologies, and
+                    well-structured software systems.
+
                 </p>
 
-                <div class="about-highlights">
 
-                    <div class="highlight-item">
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                        <span>Mobile Development</span>
-                    </div>
+                <!-- Hero Buttons -->
+                <div class="hero-buttons">
 
-                    <div class="highlight-item">
-                        <i class="fa-solid fa-globe"></i>
-                        <span>Web Development</span>
-                    </div>
 
-                    <div class="highlight-item">
-                        <i class="fa-solid fa-database"></i>
-                        <span>Database Systems</span>
-                    </div>
+                    <a href="assets/MUSEAHMED-CV.pdf"
+                        download
+                        class="btn-primary">
 
-                    <div class="highlight-item">
-                        <i class="fa-solid fa-lightbulb"></i>
-                        <span>Problem Solving</span>
-                    </div>
+                        <i class="fa-solid fa-download"></i>
 
-                </div>
+                        Download CV
 
-                <a href="#projects" class="btn-primary">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    View My Work
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= EDUCATION ================= -->
-    <section id="education" class="education">
-
-        <div class="section-title">
-            <span class="section-tag">EDUCATION</span>
-            <h2>Academic Background</h2>
-            <p>My Educational Journey</p>
-        </div>
-
-        <div class="education-container">
-
-            <div class="education-card">
-
-                <div class="education-icon">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                </div>
-
-                <div class="education-content">
-
-                    <span class="education-date">Computer Science Graduate</span>
-
-                    <h3>SIMAD University</h3>
-
-                    <h4>Bachelor's Degree in Computer Science</h4>
-
-                    <p>
-                        Studied software development, programming, databases,
-                        system analysis, algorithms, web technologies, and
-                        mobile application development.
-                    </p>
-
-                    <div class="education-skills">
-                        <span>Programming</span>
-                        <span>Software Development</span>
-                        <span>Database Systems</span>
-                        <span>System Analysis</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= SKILLS ================= -->
-    <section id="skills" class="skills">
-
-        <div class="section-title">
-            <span class="section-tag">TECHNICAL SKILLS</span>
-            <h2>My Technical Expertise</h2>
-            <p>Technologies & Tools I Work With</p>
-        </div>
-
-        <div class="skills-categories">
-
-            <!-- Programming -->
-            <div class="skills-category">
-
-                <div class="category-header">
-                    <i class="fa-solid fa-code"></i>
-                    <h3>Programming Languages</h3>
-                </div>
-
-                <div class="skills-grid">
-
-                    <div class="skill-card">
-                        <i class="fa-brands fa-java"></i>
-                        <h4>Java</h4>
-                        <p>Object-Oriented Programming and desktop applications.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <i class="fa-brands fa-python"></i>
-                        <h4>Python</h4>
-                        <p>Automation, scripting, and software development.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <i class="fa-brands fa-js"></i>
-                        <h4>JavaScript</h4>
-                        <p>Interactive and dynamic web development.</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Mobile & Web -->
-            <div class="skills-category">
-
-                <div class="category-header">
-                    <i class="fa-solid fa-laptop-code"></i>
-                    <h3>Mobile & Web Development</h3>
-                </div>
-
-                <div class="skills-grid">
-
-                    <div class="skill-card">
-                        <i class="fa-brands fa-flutter"></i>
-                        <h4>Flutter</h4>
-                        <p>Cross-platform mobile application development.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <i class="fa-brands fa-html5"></i>
-                        <h4>HTML & CSS</h4>
-                        <p>Responsive and professional user interfaces.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <i class="fa-solid fa-layer-group"></i>
-                        <h4>Responsive Design</h4>
-                        <p>Mobile, tablet, and desktop friendly interfaces.</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Backend & Database -->
-            <div class="skills-category">
-
-                <div class="category-header">
-                    <i class="fa-solid fa-server"></i>
-                    <h3>Backend & Databases</h3>
-                </div>
-
-                <div class="skills-grid">
-
-                    <div class="skill-card">
-                        <i class="fa-solid fa-database"></i>
-                        <h4>MySQL & SQL</h4>
-                        <p>Database design, queries, and data management.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <i class="fa-solid fa-fire"></i>
-                        <h4>Firebase</h4>
-                        <p>Authentication, Firestore, and cloud-based applications.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <i class="fa-solid fa-diagram-project"></i>
-                        <h4>System Analysis</h4>
-                        <p>Analyzing requirements and designing software systems.</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= FEATURED PROJECT ================= -->
-    <section class="featured-project">
-
-        <div class="section-title">
-            <span class="section-tag">FEATURED PROJECT</span>
-            <h2>RaadRaac Fleet Management System</h2>
-            <p>A Real-World Smart Fleet Management Solution</p>
-        </div>
-
-        <div class="featured-project-container">
-
-            <div class="featured-project-icon">
-                <i class="fa-solid fa-truck"></i>
-            </div>
-
-            <div class="featured-project-content">
-
-                <span class="featured-badge">
-                    <i class="fa-solid fa-star"></i>
-                    Graduation Project
-                </span>
-
-                <h3>Smart Fleet Management System</h3>
-
-                <p>
-                    A modern Flutter and Firebase-based Fleet Management System
-                    designed to help manage drivers, vehicles, trips, reports,
-                    and real-time GPS tracking.
-                </p>
-
-                <p>
-                    The system focuses on solving real-world fleet management
-                    challenges through centralized administration, live driver
-                    location monitoring, role-based access, and efficient
-                    trip management.
-                </p>
-
-                <div class="project-features">
-
-                    <div class="feature-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>Real-Time GPS Driver Tracking</span>
-                    </div>
-
-                    <div class="feature-item">
-                        <i class="fa-solid fa-user-shield"></i>
-                        <span>Admin & Driver Dashboards</span>
-                    </div>
-
-                    <div class="feature-item">
-                        <i class="fa-solid fa-car"></i>
-                        <span>Vehicle Management</span>
-                    </div>
-
-                    <div class="feature-item">
-                        <i class="fa-solid fa-route"></i>
-                        <span>Trip & Report Management</span>
-                    </div>
-
-                    <div class="feature-item">
-                        <i class="fa-solid fa-bell"></i>
-                        <span>Driver Notifications</span>
-                    </div>
-
-                    <div class="feature-item">
-                        <i class="fa-solid fa-map-location-dot"></i>
-                        <span>Google Maps Integration</span>
-                    </div>
-
-                </div>
-
-                <div class="project-tech">
-
-                    <span>Flutter</span>
-                    <span>Dart</span>
-                    <span>Firebase</span>
-                    <span>Firestore</span>
-                    <span>Google Maps</span>
-
-                </div>
-
-                <div class="project-buttons">
-
-                    <!-- KEEPING YOUR ORIGINAL PROJECT LINK -->
-                    <a href="#" class="btn-primary">
-                        <i class="fa-solid fa-eye"></i>
-                        View Project
                     </a>
+
+
+                    <a href="#projects"
+                        class="btn-secondary">
+
+                        <i class="fa-regular fa-folder-open"></i>
+
+                        View Projects
+
+                    </a>
+
+                </div>
+
+
+                <!-- Social Icons -->
+                <div class="social-icons">
+
 
                     <a href="https://github.com/Eng-museafrah.github.io"
                         target="_blank"
-                        class="btn-secondary">
-                        <i class="fab fa-github"></i>
-                        GitHub
+                        rel="noopener"
+                        aria-label="GitHub">
+
+                        <i class="fa-brands fa-github"></i>
+
+                    </a>
+
+
+                    <a href="https://www.linkedin.com/in/Muse-Ahmed-Afrah/"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="LinkedIn">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+
+                    <a href="https://www.facebook.com/MuseAhmedAdde"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <a href="mailto:museahmedafrah96@gmail.com"
+                        aria-label="Email">
+
+                        <i class="fa-solid fa-envelope"></i>
+
                     </a>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
 
 
-    <!-- ================= PROJECTS ================= -->
-    <section id="projects" class="projects">
+            <!-- =================================================
+                             HERO RIGHT
+            ================================================== -->
 
-        <div class="section-title">
-            <span class="section-tag">PORTFOLIO</span>
-            <h2>Other Projects</h2>
-            <p>Some of My Recent Work</p>
-        </div>
-
-        <div class="projects-grid">
+            <div class="hero-visual">
 
 
-            <!-- Project 1 -->
-            <div class="project-card">
+                <!-- Outer Orbit -->
+                <div class="orbit orbit-outer"></div>
 
-                <div class="project-icon">
-                    <i class="fa-solid fa-book"></i>
+                <!-- Middle Orbit -->
+                <div class="orbit orbit-middle"></div>
+
+                <!-- Inner Orbit -->
+                <div class="orbit orbit-inner"></div>
+
+
+                <!-- Animated Orbit Dots -->
+
+                <span class="orbit-dot dot-1"></span>
+                <span class="orbit-dot dot-2"></span>
+                <span class="orbit-dot dot-3"></span>
+                <span class="orbit-dot dot-4"></span>
+                <span class="orbit-dot dot-5"></span>
+                <span class="orbit-dot dot-6"></span>
+
+
+                <!-- =================================================
+                              PROFILE CENTER
+                ================================================== -->
+
+                <div class="profile-area">
+
+
+                    <!-- Glow -->
+                    <div class="profile-glow"></div>
+
+
+                    <!-- Green / Blue Ring -->
+                    <div class="profile-ring"></div>
+
+
+                    <!-- Profile Slider -->
+                    <div class="profile-slider">
+
+
+                        <!-- Profile 1 -->
+                        <div class="profile-image active">
+
+                            <img src="assets/profile-1.png"
+                                alt="Muse Afrah Profile 1">
+
+                        </div>
+
+
+                        <!-- Profile 2 -->
+                        <div class="profile-image">
+
+                            <img src="assets/profile-2.png"
+                                alt="Muse Afrah Profile 2">
+
+                        </div>
+
+
+                        <!-- Profile 3 -->
+                        <div class="profile-image">
+
+                            <img src="assets/profile-3.png"
+                                alt="Muse Afrah Profile 3">
+
+                        </div>
+
+
+                    </div>
+
                 </div>
 
-                <h3>Library Management System</h3>
 
-                <p>
-                    Java desktop application for managing books,
-                    students, borrowing, and returning operations.
-                </p>
 
-                <div class="project-tags">
-                    <span>Java</span>
-                    <span>Database</span>
-                    <span>Desktop App</span>
+                <!-- =================================================
+                           PROJECT IMAGE 1 - DASHBOARD
+                ================================================== -->
+
+                <div class="orbit-card orbit-dashboard">
+
+                    <div class="orbit-card-image">
+
+                        <img src="assets/dashboard.png"
+                            alt="Dashboard Project">
+
+                    </div>
+
+                    <span>
+                        Dashboard
+                    </span>
+
                 </div>
 
-                <!-- KEEPING YOUR ORIGINAL LINK -->
-                <a href="#" class="project-link">
-                    View Project
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
+
+
+                <!-- =================================================
+                           PROJECT IMAGE 2 - MOBILE APP
+                ================================================== -->
+
+                <div class="orbit-card orbit-mobile">
+
+                    <div class="orbit-card-image">
+
+                        <img src="assets/mobile-app.png"
+                            alt="Mobile App Project">
+
+                    </div>
+
+                    <span>
+                        Mobile App
+                    </span>
+
+                </div>
+
+
+
+                <!-- =================================================
+                           PROJECT IMAGE 3 - WEBSITE
+                ================================================== -->
+
+                <div class="orbit-card orbit-website">
+
+                    <div class="orbit-card-image">
+
+                        <img src="assets/website.png"
+                            alt="Website Project">
+
+                    </div>
+
+                    <span>
+                        Website
+                    </span>
+
+                </div>
+
+
+
+                <!-- =================================================
+                           PROJECT IMAGE 4 - ECOMMERCE
+                ================================================== -->
+
+                <div class="orbit-card orbit-ecommerce">
+
+                    <div class="orbit-card-image">
+
+                        <img src="assets/ecommerce.png"
+                            alt="E-Commerce Project">
+
+                    </div>
+
+                    <span>
+                        E-Commerce
+                    </span>
+
+                </div>
+
+
+
+                <!-- =================================================
+                           PROJECT IMAGE 5 - WEB APP
+                ================================================== -->
+
+                <div class="orbit-card orbit-webapp">
+
+                    <div class="orbit-card-image">
+
+                        <img src="assets/web-app.png"
+                            alt="Web Application">
+
+                    </div>
+
+                    <span>
+                        Web App
+                    </span>
+
+                </div>
+
+
+
+                <!-- =================================================
+                           PROJECT IMAGE 6 - UI UX
+                ================================================== -->
+
+                <div class="orbit-card orbit-uiux">
+
+                    <div class="orbit-card-image">
+
+                        <img src="assets/ui-ux.png"
+                            alt="UI UX Design">
+
+                    </div>
+
+                    <span>
+                        UI / UX Design
+                    </span>
+
+                </div>
+
 
             </div>
 
 
-            <!-- Project 2 -->
-            <div class="project-card">
+        </section>
 
-                <div class="project-icon">
-                    <i class="fa-solid fa-file-lines"></i>
+
+
+        <!-- =====================================================
+                            STATS SECTION
+        ====================================================== -->
+
+        <section class="stats-section">
+
+            <div class="stats-container">
+
+
+                <!-- Projects -->
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+
+                        <i class="fa-solid fa-code"></i>
+
+                    </div>
+
+                    <div class="stat-text">
+
+                        <strong>
+                            10+
+                        </strong>
+
+                        <span>
+                            Projects Completed
+                        </span>
+
+                    </div>
+
                 </div>
 
-                <h3>Job Application Form</h3>
+
+
+                <!-- Education -->
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                    </div>
+
+                    <div class="stat-text">
+
+                        <strong>
+                            BSc
+                        </strong>
+
+                        <span>
+                            Computer Science
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Clients -->
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+
+                        <i class="fa-regular fa-face-smile"></i>
+
+                    </div>
+
+                    <div class="stat-text">
+
+                        <strong>
+                            5+
+                        </strong>
+
+                        <span>
+                            Happy Clients
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Experience -->
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+
+                        <i class="fa-solid fa-award"></i>
+
+                    </div>
+
+                    <div class="stat-text">
+
+                        <strong>
+                            1+
+                        </strong>
+
+                        <span>
+                            Years Experience
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+                              ABOUT
+        ====================================================== -->
+
+        <section id="about"
+            class="about section">
+
+
+            <div class="section-title">
+
+                <span class="section-tag">
+                    ABOUT ME
+                </span>
+
+                <h2>
+                    Who I Am
+                </h2>
 
                 <p>
-                    Professional Java application for handling
-                    employee registration and management.
+                    My Background & What I Do
                 </p>
-
-                <div class="project-tags">
-                    <span>Java</span>
-                    <span>OOP</span>
-                    <span>Desktop App</span>
-                </div>
-
-                <!-- KEEPING YOUR ORIGINAL LINK -->
-                <a href="#" class="project-link">
-                    View Project
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
 
             </div>
 
 
-            <!-- Project 3 -->
-            <div class="project-card">
-
-                <div class="project-icon">
-                    <i class="fa-solid fa-globe"></i>
-                </div>
-
-                <h3>Personal Portfolio Website</h3>
-
-                <p>
-                    A responsive personal portfolio website designed
-                    to showcase my skills, projects, experience,
-                    and professional profile.
-                </p>
-
-                <div class="project-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-
-                <a href="#home" class="project-link">
-                    View Project
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
+            <div class="about-container">
 
 
-    <!-- ================= EXPERIENCE ================= -->
-    <section id="experience" class="experience">
+                <div class="about-card">
 
-        <div class="section-title">
-            <span class="section-tag">EXPERIENCE</span>
-            <h2>Professional Experience</h2>
-            <p>My Work Experience & Professional Background</p>
-        </div>
 
-        <div class="experience-container">
+                    <div class="about-icon">
 
-            <div class="experience-card">
+                        <i class="fa-solid fa-user-tie"></i>
 
-                <div class="experience-icon">
-                    <i class="fa-solid fa-briefcase"></i>
-                </div>
+                    </div>
 
-                <div class="experience-content">
 
-                    <span class="experience-date">2022 - 2024</span>
+                    <h3>
+                        Junior Software Developer
+                    </h3>
 
-                    <h3>Customer Service & Reseller Experience</h3>
-
-                    <h4>Somtel</h4>
 
                     <p>
-                        Gained professional experience in customer service,
-                        communication, customer support, and assisting clients
-                        with products and services.
+
+                        I am a Computer Science graduate from
+                        SIMAD University with knowledge of software
+                        development, mobile application development,
+                        databases, system analysis, and problem solving.
+
                     </p>
 
-                    <ul>
-                        <li>Communicated professionally with customers.</li>
-                        <li>Provided customer support and service assistance.</li>
-                        <li>Developed strong communication and problem-solving skills.</li>
-                        <li>Worked responsibly in a customer-focused environment.</li>
-                    </ul>
+
+                    <p>
+
+                        My main interest is building high-quality
+                        software solutions that are fast, responsive,
+                        user-friendly, and scalable.
+
+                    </p>
+
+
+                    <p>
+
+                        I continuously improve my technical skills by
+                        learning modern technologies and building
+                        real-world projects.
+
+                    </p>
+
+
+                    <div class="about-highlights">
+
+
+                        <div class="highlight-item">
+
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+
+                            <span>
+                                Mobile Development
+                            </span>
+
+                        </div>
+
+
+                        <div class="highlight-item">
+
+                            <i class="fa-solid fa-globe"></i>
+
+                            <span>
+                                Web Development
+                            </span>
+
+                        </div>
+
+
+                        <div class="highlight-item">
+
+                            <i class="fa-solid fa-database"></i>
+
+                            <span>
+                                Database Systems
+                            </span>
+
+                        </div>
+
+
+                        <div class="highlight-item">
+
+                            <i class="fa-solid fa-lightbulb"></i>
+
+                            <span>
+                                Problem Solving
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <a href="#projects"
+                        class="btn-primary">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        View My Work
+
+                    </a>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- ================= CERTIFICATIONS ================= -->
-    <section id="certifications" class="certifications">
 
-        <div class="section-title">
-            <span class="section-tag">CERTIFICATIONS</span>
-            <h2>Certificates & Achievements</h2>
-            <p>Continuous Learning & Professional Development</p>
-        </div>
+        <!-- =====================================================
+                            EDUCATION
+        ====================================================== -->
 
-        <div class="certifications-grid">
+        <section id="education"
+            class="education section">
 
-            <div class="certification-card">
 
-                <div class="certification-icon">
-                    <i class="fa-solid fa-certificate"></i>
-                </div>
+            <div class="section-title">
 
-                <h3>Computer Science Degree</h3>
+                <span class="section-tag">
+                    EDUCATION
+                </span>
+
+                <h2>
+                    Academic Background
+                </h2>
 
                 <p>
-                    Bachelor's Degree in Computer Science from SIMAD University.
+                    My Educational Journey
                 </p>
 
             </div>
 
 
-            <div class="certification-card">
+            <div class="education-container">
 
-                <div class="certification-icon">
-                    <i class="fa-solid fa-code"></i>
+
+                <div class="education-card">
+
+
+                    <div class="education-icon">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                    </div>
+
+
+                    <div class="education-content">
+
+                        <span class="education-date">
+                            Computer Science Graduate
+                        </span>
+
+                        <h3>
+                            SIMAD University
+                        </h3>
+
+                        <h4>
+                            Bachelor's Degree in Computer Science
+                        </h4>
+
+                        <p>
+
+                            Studied software development,
+                            programming, databases, system analysis,
+                            algorithms, web technologies, and mobile
+                            application development.
+
+                        </p>
+
+
+                        <div class="education-skills">
+
+                            <span>
+                                Programming
+                            </span>
+
+                            <span>
+                                Software Development
+                            </span>
+
+                            <span>
+                                Database Systems
+                            </span>
+
+                            <span>
+                                System Analysis
+                            </span>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <h3>Software Development Projects</h3>
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+                              SKILLS
+        ====================================================== -->
+
+        <section id="skills"
+            class="skills section">
+
+
+            <div class="section-title">
+
+                <span class="section-tag">
+                    TECHNICAL SKILLS
+                </span>
+
+                <h2>
+                    My Technical Expertise
+                </h2>
 
                 <p>
-                    Practical experience gained through building Java, Flutter,
-                    Firebase, and web development projects.
+                    Technologies & Tools I Work With
                 </p>
 
             </div>
 
 
-            <div class="certification-card">
+            <div class="skills-categories">
 
-                <div class="certification-icon">
-                    <i class="fa-solid fa-book-open-reader"></i>
+
+                <!-- Programming -->
+
+                <div class="skills-category">
+
+                    <div class="category-header">
+
+                        <i class="fa-solid fa-code"></i>
+
+                        <h3>
+                            Programming Languages
+                        </h3>
+
+                    </div>
+
+
+                    <div class="skills-grid">
+
+
+                        <div class="skill-card">
+
+                            <i class="fa-brands fa-java"></i>
+
+                            <h4>
+                                Java
+                            </h4>
+
+                            <p>
+                                Object-Oriented Programming and
+                                desktop applications.
+                            </p>
+
+                        </div>
+
+
+                        <div class="skill-card">
+
+                            <i class="fa-brands fa-python"></i>
+
+                            <h4>
+                                Python
+                            </h4>
+
+                            <p>
+                                Automation, scripting, and software
+                                development.
+                            </p>
+
+                        </div>
+
+
+                        <div class="skill-card">
+
+                            <i class="fa-brands fa-js"></i>
+
+                            <h4>
+                                JavaScript
+                            </h4>
+
+                            <p>
+                                Interactive and dynamic web development.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
                 </div>
 
-                <h3>Continuous Learning</h3>
+
+
+                <!-- Mobile & Web -->
+
+                <div class="skills-category">
+
+                    <div class="category-header">
+
+                        <i class="fa-solid fa-laptop-code"></i>
+
+                        <h3>
+                            Mobile & Web Development
+                        </h3>
+
+                    </div>
+
+
+                    <div class="skills-grid">
+
+
+                        <div class="skill-card">
+
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+
+                            <h4>
+                                Flutter
+                            </h4>
+
+                            <p>
+                                Cross-platform mobile application
+                                development.
+                            </p>
+
+                        </div>
+
+
+                        <div class="skill-card">
+
+                            <i class="fa-brands fa-html5"></i>
+
+                            <h4>
+                                HTML & CSS
+                            </h4>
+
+                            <p>
+                                Responsive and professional user
+                                interfaces.
+                            </p>
+
+                        </div>
+
+
+                        <div class="skill-card">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            <h4>
+                                Responsive Design
+                            </h4>
+
+                            <p>
+                                Mobile, tablet, and desktop friendly
+                                interfaces.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Backend -->
+
+                <div class="skills-category">
+
+                    <div class="category-header">
+
+                        <i class="fa-solid fa-server"></i>
+
+                        <h3>
+                            Backend & Databases
+                        </h3>
+
+                    </div>
+
+
+                    <div class="skills-grid">
+
+
+                        <div class="skill-card">
+
+                            <i class="fa-solid fa-database"></i>
+
+                            <h4>
+                                MySQL & SQL
+                            </h4>
+
+                            <p>
+                                Database design, queries, and data
+                                management.
+                            </p>
+
+                        </div>
+
+
+                        <div class="skill-card">
+
+                            <i class="fa-solid fa-fire"></i>
+
+                            <h4>
+                                Firebase
+                            </h4>
+
+                            <p>
+                                Authentication, Firestore, and cloud
+                                applications.
+                            </p>
+
+                        </div>
+
+
+                        <div class="skill-card">
+
+                            <i class="fa-solid fa-diagram-project"></i>
+
+                            <h4>
+                                System Analysis
+                            </h4>
+
+                            <p>
+                                Analyzing requirements and designing
+                                software systems.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+                         FEATURED PROJECT
+        ====================================================== -->
+
+        <section class="featured-project section">
+
+
+            <div class="section-title">
+
+                <span class="section-tag">
+                    FEATURED PROJECT
+                </span>
+
+                <h2>
+                    RaadRaac Fleet Management System
+                </h2>
 
                 <p>
-                    Continuously learning modern technologies and software
-                    development best practices.
+                    A Real-World Smart Fleet Management Solution
                 </p>
 
             </div>
 
-        </div>
 
-    </section>
-
-
-    <!-- ================= CONTACT ================= -->
-    <section id="contact" class="contact">
-
-        <div class="section-title">
-            <span class="section-tag">GET IN TOUCH</span>
-            <h2>Let's Work Together</h2>
-            <p>Feel Free to Contact Me</p>
-        </div>
-
-        <div class="contact-intro">
-
-            <p>
-                I am always interested in new opportunities, collaborations,
-                software development projects, and professional connections.
-            </p>
-
-        </div>
-
-        <div class="contact-container">
+            <div class="featured-project-container">
 
 
-            <a href="tel:+252617656632" class="contact-card">
+                <div class="featured-project-icon">
 
-                <i class="fa-solid fa-phone"></i>
+                    <i class="fa-solid fa-truck"></i>
 
-                <h3>Phone</h3>
-
-                <p>+252 617656632</p>
-
-            </a>
+                </div>
 
 
-            <a href="mailto:museahmedafrah96@gmail.com" class="contact-card">
-
-                <i class="fa-solid fa-envelope"></i>
-
-                <h3>Email</h3>
-
-                <p>museahmedafrah96@gmail.com</p>
-
-            </a>
+                <div class="featured-project-content">
 
 
-            <!-- KEEPING YOUR GITHUB -->
-            <a href="https://github.com/Eng-museafrah.github.io"
-                target="_blank"
-                class="contact-card">
+                    <span class="featured-badge">
 
-                <i class="fa-brands fa-github"></i>
+                        <i class="fa-solid fa-star"></i>
 
-                <h3>GitHub</h3>
+                        Graduation Project
 
-                <p>Eng-MuseAfrah.github.io</p>
-
-            </a>
+                    </span>
 
 
-            <!-- KEEPING YOUR LINKEDIN -->
-            <a href="https://www.linkedin.com/in/Muse-Ahmed-Afrah/"
-                target="_blank"
-                class="contact-card">
-
-                <i class="https://www.linkedin.com/in/muse-ahmed-afrah-785360397"></i>
-
-                <h3>LinkedIn</h3>
-
-                <p>Connect with me professionally</p>
-
-            </a>
-
-        </div>
+                    <h3>
+                        Smart Fleet Management System
+                    </h3>
 
 
-        <div class="contact-cv">
+                    <p>
 
-            <h3>Interested in Working Together?</h3>
+                        A modern Flutter and Firebase-based Fleet
+                        Management System designed to help manage
+                        drivers, vehicles, trips, reports, and
+                        real-time GPS tracking.
 
-            <p>
-                Download my CV to learn more about my education,
-                skills, projects, and professional experience.
-            </p>
-
-            <!-- Change CV.pdf to your actual CV file name -->
-            <a href="MUSEAHMED-CV.pdf" download class="btn-primary">
-
-                <i class="fa-solid fa-download"></i>
-
-                Download My CV
-
-            </a>
-
-        </div>
-
-    </section>
+                    </p>
 
 
-    <!-- ================= FOOTER ================= -->
+                    <p>
+
+                        The system focuses on solving real-world
+                        fleet management challenges through
+                        centralized administration, live driver
+                        location monitoring, role-based access,
+                        and efficient trip management.
+
+                    </p>
+
+
+                    <div class="project-features">
+
+
+                        <div class="feature-item">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <span>
+                                Real-Time GPS Driver Tracking
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature-item">
+
+                            <i class="fa-solid fa-user-shield"></i>
+
+                            <span>
+                                Admin & Driver Dashboards
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature-item">
+
+                            <i class="fa-solid fa-car"></i>
+
+                            <span>
+                                Vehicle Management
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature-item">
+
+                            <i class="fa-solid fa-route"></i>
+
+                            <span>
+                                Trip & Report Management
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature-item">
+
+                            <i class="fa-solid fa-bell"></i>
+
+                            <span>
+                                Driver Notifications
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature-item">
+
+                            <i class="fa-solid fa-map-location-dot"></i>
+
+                            <span>
+                                Google Maps Integration
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="project-tech">
+
+                        <span>
+                            Flutter
+                        </span>
+
+                        <span>
+                            Dart
+                        </span>
+
+                        <span>
+                            Firebase
+                        </span>
+
+                        <span>
+                            Firestore
+                        </span>
+
+                        <span>
+                            Google Maps
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-buttons">
+
+                        <a href="#"
+                            class="btn-primary">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            View Project
+
+                        </a>
+
+
+                        <a href="https://github.com/Eng-museafrah.github.io"
+                            target="_blank"
+                            rel="noopener"
+                            class="btn-secondary">
+
+                            <i class="fa-brands fa-github"></i>
+
+                            GitHub
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+                              PROJECTS
+        ====================================================== -->
+
+        <section id="projects"
+            class="projects section">
+
+
+            <div class="section-title">
+
+                <span class="section-tag">
+                    PORTFOLIO
+                </span>
+
+                <h2>
+                    Other Projects
+                </h2>
+
+                <p>
+                    Some of My Recent Work
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <!-- Project 1 -->
+
+                <article class="project-card">
+
+                    <div class="project-icon">
+
+                        <i class="fa-solid fa-book"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Library Management System
+                    </h3>
+
+
+                    <p>
+
+                        Java desktop application for managing books,
+                        students, borrowing, and returning operations.
+
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>
+                            Java
+                        </span>
+
+                        <span>
+                            Database
+                        </span>
+
+                        <span>
+                            Desktop App
+                        </span>
+
+                    </div>
+
+
+                    <a href="#"
+                        class="project-link">
+
+                        View Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- Project 2 -->
+
+                <article class="project-card">
+
+                    <div class="project-icon">
+
+                        <i class="fa-solid fa-file-lines"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Job Application Form
+                    </h3>
+
+
+                    <p>
+
+                        Professional Java application for handling
+                        employee registration and management.
+
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>
+                            Java
+                        </span>
+
+                        <span>
+                            OOP
+                        </span>
+
+                        <span>
+                            Desktop App
+                        </span>
+
+                    </div>
+
+
+                    <a href="#"
+                        class="project-link">
+
+                        View Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- Project 3 -->
+
+                <article class="project-card">
+
+                    <div class="project-icon">
+
+                        <i class="fa-solid fa-globe"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Personal Portfolio Website
+                    </h3>
+
+
+                    <p>
+
+                        A responsive personal portfolio website
+                        designed to showcase my skills, projects,
+                        experience, and professional profile.
+
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>
+                            HTML
+                        </span>
+
+                        <span>
+                            CSS
+                        </span>
+
+                        <span>
+                            JavaScript
+                        </span>
+
+                    </div>
+
+
+                    <a href="#home"
+                        class="project-link">
+
+                        View Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+                            EXPERIENCE
+        ====================================================== -->
+
+        <section id="experience"
+            class="experience section">
+
+
+            <div class="section-title">
+
+                <span class="section-tag">
+                    EXPERIENCE
+                </span>
+
+                <h2>
+                    Professional Experience
+                </h2>
+
+                <p>
+                    My Work Experience & Professional Background
+                </p>
+
+            </div>
+
+
+            <div class="experience-container">
+
+
+                <div class="experience-card">
+
+
+                    <div class="experience-icon">
+
+                        <i class="fa-solid fa-briefcase"></i>
+
+                    </div>
+
+
+                    <div class="experience-content">
+
+                        <span class="experience-date">
+                            2022 - 2024
+                        </span>
+
+
+                        <h3>
+                            Customer Service & Reseller Experience
+                        </h3>
+
+
+                        <h4>
+                            Somtel
+                        </h4>
+
+
+                        <p>
+
+                            Gained professional experience in customer
+                            service, communication, customer support,
+                            and assisting clients with products and
+                            services.
+
+                        </p>
+
+
+                        <ul>
+
+                            <li>
+                                Communicated professionally with customers.
+                            </li>
+
+                            <li>
+                                Provided customer support and service assistance.
+                            </li>
+
+                            <li>
+                                Developed strong communication and
+                                problem-solving skills.
+                            </li>
+
+                            <li>
+                                Worked responsibly in a customer-focused
+                                environment.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+                          CERTIFICATIONS
+        ====================================================== -->
+
+        <section id="certifications"
+            class="certifications section">
+
+
+            <div class="section-title">
+
+                <span class="section-tag">
+                    CERTIFICATIONS
+                </span>
+
+                <h2>
+                    Certificates & Achievements
+                </h2>
+
+                <p>
+                    Continuous Learning & Professional Development
+                </p>
+
+            </div>
+
+
+            <div class="certifications-grid">
+
+
+                <div class="certification-card">
+
+                    <div class="certification-icon">
+
+                        <i class="fa-solid fa-certificate"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Computer Science Degree
+                    </h3>
+
+
+                    <p>
+
+                        Bachelor's Degree in Computer Science
+                        from SIMAD University.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="certification-card">
+
+                    <div class="certification-icon">
+
+                        <i class="fa-solid fa-code"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Software Development Projects
+                    </h3>
+
+
+                    <p>
+
+                        Practical experience gained through building
+                        Java, Flutter, Firebase, and web development
+                        projects.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="certification-card">
+
+                    <div class="certification-icon">
+
+                        <i class="fa-solid fa-book-open-reader"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Continuous Learning
+                    </h3>
+
+
+                    <p>
+
+                        Continuously learning modern technologies
+                        and software development best practices.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+                              CONTACT
+        ====================================================== -->
+
+        <section id="contact"
+            class="contact section">
+
+
+            <div class="section-title">
+
+                <span class="section-tag">
+                    GET IN TOUCH
+                </span>
+
+                <h2>
+                    Let's Work Together
+                </h2>
+
+                <p>
+                    Feel Free to Contact Me
+                </p>
+
+            </div>
+
+
+            <div class="contact-intro">
+
+                <p>
+
+                    I am always interested in new opportunities,
+                    collaborations, software development projects,
+                    and professional connections.
+
+                </p>
+
+            </div>
+
+
+            <div class="contact-container">
+
+
+                <!-- Phone -->
+
+                <a href="tel:+252617656632"
+                    class="contact-card">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <h3>
+                        Phone
+                    </h3>
+
+                    <p>
+                        +252 617656632
+                    </p>
+
+                </a>
+
+
+
+                <!-- Email -->
+
+                <a href="mailto:museahmedafrah96@gmail.com"
+                    class="contact-card">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p>
+                        museahmedafrah96@gmail.com
+                    </p>
+
+                </a>
+
+
+
+                <!-- GitHub -->
+
+                <a href="https://github.com/Eng-museafrah.github.io"
+                    target="_blank"
+                    rel="noopener"
+                    class="contact-card">
+
+                    <i class="fa-brands fa-github"></i>
+
+                    <h3>
+                        GitHub
+                    </h3>
+
+                    <p>
+                        Eng-MuseAfrah.github.io
+                    </p>
+
+                </a>
+
+
+
+                <!-- LinkedIn -->
+
+                <a href="https://www.linkedin.com/in/Muse-Ahmed-Afrah/"
+                    target="_blank"
+                    rel="noopener"
+                    class="contact-card">
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                    <h3>
+                        LinkedIn
+                    </h3>
+
+                    <p>
+                        Connect with me professionally
+                    </p>
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- Contact CV -->
+
+            <div class="contact-cv">
+
+                <h3>
+                    Interested in Working Together?
+                </h3>
+
+
+                <p>
+
+                    Download my CV to learn more about my education,
+                    skills, projects, and professional experience.
+
+                </p>
+
+
+                <a href="assets/MUSEAHMED-CV.pdf"
+                    download
+                    class="btn-primary">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download My CV
+
+                </a>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+                             FOOTER
+    ====================================================== -->
+
     <footer class="footer">
 
         <div class="footer-content">
 
-            <a href="#home" class="footer-logo">
+
+            <a href="#home"
+                class="footer-logo">
+
                 Muse<span>Afrah</span>
+
             </a>
 
+
             <p class="footer-description">
-                Junior Software Developer | Flutter Developer |
+
+                Junior Software Developer |
+                Flutter Developer |
                 Full Stack Development Enthusiast
+
             </p>
+
 
             <div class="footer-icons">
 
+
                 <a href="https://github.com/Eng-museafrah.github.io"
                     target="_blank"
+                    rel="noopener"
                     aria-label="GitHub">
-                    <i class="fab fa-github"></i>
+
+                    <i class="fa-brands fa-github"></i>
+
                 </a>
+
 
                 <a href="https://www.linkedin.com/in/Muse-Ahmed-Afrah/"
                     target="_blank"
+                    rel="noopener"
                     aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
                 </a>
+
 
                 <a href="https://www.facebook.com/MuseAhmedAdde"
                     target="_blank"
+                    rel="noopener"
                     aria-label="Facebook">
-                    <i class="fab fa-facebook"></i>
+
+                    <i class="fa-brands fa-facebook-f"></i>
+
                 </a>
 
-                <a href="https://www.instagram.com/muze_afrah/"
-                    target="_blank"
-                    aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
+
+                <a href="mailto:museahmedafrah96@gmail.com"
+                    aria-label="Email">
+
+                    <i class="fa-solid fa-envelope"></i>
+
                 </a>
+
 
             </div>
+
 
             <div class="footer-links">
 
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#skills">
+                    Skills
+                </a>
+
+                <a href="#projects">
+                    Projects
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
 
             </div>
 
+
             <p class="copyright">
-                © 2026 Muse Ahmed Afrah. All Rights Reserved.
+
+                © 2026 Muse Ahmed Afrah.
+                All Rights Reserved.
+
             </p>
 
         </div>
@@ -873,7 +1971,11 @@
     </footer>
 
 
-    <!-- JavaScript -->
+
+    <!-- =====================================================
+                         JAVASCRIPT
+    ====================================================== -->
+
     <script src="script.js"></script>
 
 </body>
