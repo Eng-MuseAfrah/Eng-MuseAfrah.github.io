@@ -1155,7 +1155,7 @@ body::after {
     height: auto;
 
     left: 50%;
-    bottom: -2px;
+    bottom: 25px;
 
     transform: translateX(-50%);
 
