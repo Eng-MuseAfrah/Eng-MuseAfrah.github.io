@@ -3044,485 +3044,285 @@ body.light-mode .featured-project-content p {
         flex-basis: 90px;
     }
 }
+
 /* =========================================================
-   NEW HERO VISUAL — SQUARE PROJECT GRID
-   Replaces the circular/orbit presentation on the right side.
-   Existing HTML classes are kept, so no HTML changes are required.
+   FINAL HERO IMAGE SLIDER — ONE SQUARE IMAGE AT A TIME
+   Replaces the old circular/orbit presentation.
 ========================================================= */
 
 .hero-visual {
-    position: relative;
-    width: min(700px, 100%);
-    height: auto;
-    min-height: 500px;
-    margin: 0 auto;
-    padding: 8px;
-
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-    align-items: stretch;
-
-    animation: heroVisualGrid 1s cubic-bezier(.22, .61, .36, 1) forwards;
-    opacity: 0;
-    transform: translateX(55px);
+    position: relative !important;
+    width: 430px !important;
+    max-width: 100% !important;
+    height: 430px !important;
+    min-height: 430px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+    animation: heroVisualFinal .9s ease-out forwards !important;
+    opacity: 0 !important;
+    transform: translateX(35px) !important;
 }
 
-@keyframes heroVisualGrid {
-    from {
-        opacity: 0;
-        transform: translateX(55px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+@keyframes heroVisualFinal {
+    from { opacity: 0; transform: translateX(35px) !important; }
+    to { opacity: 1; transform: translateX(0) !important; }
 }
 
-/* Remove the old circular/orbit presentation */
+/* Remove old circles/orbit decorations */
 .hero-visual .orbit,
-.hero-visual .profile-area,
-.hero-visual .orbit-dot {
+.hero-visual .orbit-dot,
+.hero-visual .profile-area::before,
+.hero-visual .profile-glow,
+.hero-visual .profile-ring {
     display: none !important;
 }
 
-/* Square project cards */
-.hero-visual .orbit-card {
-    --from-x: 0px;
-    --from-y: 35px;
-
+/* Compact square frame */
+.hero-visual .profile-area {
     position: relative !important;
-    inset: auto !important;
-
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: none !important;
-    height: auto !important;
-    min-height: 0 !important;
-    flex-basis: auto !important;
-
-    aspect-ratio: 1 / 0.82;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    padding: 0;
-    text-align: left;
-
-    border: 1px solid rgba(0, 225, 255, 0.48);
-    border-radius: 18px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(10, 42, 54, 0.96),
-            rgba(4, 25, 35, 0.88)
-        );
-
+    width: 350px !important;
+    height: 350px !important;
+    min-width: 350px !important;
+    min-height: 350px !important;
+    max-width: 350px !important;
+    max-height: 350px !important;
+    display: block !important;
+    border-radius: 22px !important;
+    overflow: hidden !important;
+    z-index: 10 !important;
+    background: #061e29 !important;
+    border: 1px solid rgba(0, 225, 255, .55) !important;
     box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.25),
-        inset 0 0 22px rgba(0, 225, 210, 0.035);
-
-    overflow: hidden;
-    isolation: isolate;
-
-    opacity: 0;
-    transform: translate(var(--from-x), var(--from-y)) scale(.92);
-    animation:
-        projectCardReveal .85s cubic-bezier(.16, 1, .3, 1) forwards,
-        projectCardFloat 5s ease-in-out 1s infinite;
-
-    transition:
-        transform .35s ease,
-        border-color .35s ease,
-        box-shadow .35s ease,
-        background .35s ease;
+        0 22px 50px rgba(0, 0, 0, .32),
+        0 0 28px rgba(0, 220, 210, .14),
+        inset 0 0 20px rgba(0, 225, 255, .04) !important;
 }
 
-/* All cards start their reveal together, from different directions */
-.hero-visual .orbit-card:nth-of-type(1) {
-    --from-x: -35px;
-    --from-y: 35px;
+/* Thin top highlight */
+.hero-visual .profile-area::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 12% !important;
+    width: 76% !important;
+    height: 2px !important;
+    z-index: 20 !important;
+    border-radius: 10px !important;
+    background: linear-gradient(90deg, transparent, #00d9ff, #00e6a0, transparent) !important;
+    box-shadow: 0 0 12px rgba(0, 225, 210, .45) !important;
 }
 
-.hero-visual .orbit-card:nth-of-type(2) {
-    --from-x: 0;
-    --from-y: 45px;
+/* Square image viewport */
+.hero-visual .profile-slider {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    left: 0 !important;
+    top: 0 !important;
+    border-radius: 21px !important;
+    overflow: hidden !important;
+    z-index: 5 !important;
+    background: #061e29 !important;
 }
 
-.hero-visual .orbit-card:nth-of-type(3) {
-    --from-x: 35px;
-    --from-y: 35px;
+/* One image enters from LEFT, stays CENTER, exits RIGHT */
+.hero-visual .profile-image {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 21px !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    transform: translateX(-120%) !important;
+    animation: squareImageSlide 12s cubic-bezier(.65,0,.35,1) infinite !important;
+    pointer-events: none !important;
 }
 
-.hero-visual .orbit-card:nth-of-type(4) {
-    --from-x: -35px;
-    --from-y: -35px;
-}
+.hero-visual .profile-image:nth-child(1) { animation-delay: 0s !important; }
+.hero-visual .profile-image:nth-child(2) { animation-delay: 4s !important; }
+.hero-visual .profile-image:nth-child(3) { animation-delay: 8s !important; }
 
-.hero-visual .orbit-card:nth-of-type(5) {
-    --from-x: 0;
-    --from-y: -45px;
-}
-
-.hero-visual .orbit-card:nth-of-type(6) {
-    --from-x: 35px;
-    --from-y: -35px;
-}
-
-@keyframes projectCardReveal {
+@keyframes squareImageSlide {
+    /* Start outside on the LEFT */
     0% {
         opacity: 0;
-        transform: translate(var(--from-x), var(--from-y)) scale(.88);
-        filter: blur(5px);
+        transform: translateX(-120%);
     }
 
-    65% {
+    /* Slide into CENTER */
+    8% {
         opacity: 1;
-        filter: blur(0);
+        transform: translateX(0);
     }
 
+    /* Stay in CENTER */
+    25% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Move toward RIGHT */
+    32% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Exit completely to RIGHT */
+    40% {
+        opacity: 0;
+        transform: translateX(120%);
+    }
+
+    /* Remain hidden until its next turn */
     100% {
-        opacity: 1;
-        transform: translate(0, 0) scale(1);
-        filter: blur(0);
+        opacity: 0;
+        transform: translateX(120%);
     }
 }
 
-@keyframes projectCardFloat {
-    0%, 100% {
-        translate: 0 0;
-    }
-
-    50% {
-        translate: 0 -6px;
-    }
-}
-
-.hero-visual .orbit-card:hover {
-    transform: translateY(-8px) scale(1.025) !important;
-    border-color: rgba(0, 239, 210, 0.9);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(9, 57, 68, 0.98),
-            rgba(4, 29, 40, 0.96)
-        );
-
-    box-shadow:
-        0 18px 45px rgba(0, 0, 0, 0.32),
-        0 0 24px rgba(0, 225, 210, 0.18),
-        inset 0 0 25px rgba(0, 225, 210, 0.06);
-
-    z-index: 20;
-}
-
-/* Thin neon top line */
-.hero-visual .orbit-card::before {
-    content: "";
-    position: absolute;
-    left: 16px;
-    right: 16px;
-    top: 0;
-    height: 2px;
-    border-radius: 10px;
-
-    background: linear-gradient(
-        90deg,
-        transparent,
-        #00d9ff,
-        #00e6a0,
-        transparent
-    );
-
-    opacity: .85;
-    box-shadow: 0 0 12px rgba(0, 225, 210, 0.35);
-}
-
-/* Subtle corner glow */
-.hero-visual .orbit-card::after {
-    content: "";
-    position: absolute;
-    width: 90px;
-    height: 90px;
-    right: -45px;
-    top: -45px;
-
-    border-radius: 50%;
-    background: rgba(0, 225, 210, 0.12);
-    filter: blur(18px);
-
-    pointer-events: none;
-}
-
-/* Image frame */
-.hero-visual .orbit-card-image {
-    position: relative;
-    width: 100% !important;
-    height: 100% !important;
-    min-width: 0 !important;
-    max-width: none !important;
-    min-height: 0 !important;
-    max-height: none !important;
-
-    aspect-ratio: auto;
-    flex: 1;
-
-    padding: 0 !important;
-    overflow: hidden;
-
-    border-radius: 17px;
-    background: #071d28;
-
-    border: 0;
-    box-shadow: none;
-
-    backdrop-filter: none;
-}
-
-/* Dark overlay keeps project titles readable */
-.hero-visual .orbit-card-image::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(0, 20, 29, 0.02) 30%,
-            rgba(2, 15, 23, 0.58) 100%
-        );
-
-    pointer-events: none;
-    z-index: 2;
-}
-
-/* Project images */
-.hero-visual .orbit-card-image img {
+.hero-visual .profile-image img {
+    position: absolute !important;
     width: 100% !important;
     height: 100% !important;
     max-width: none !important;
     max-height: none !important;
-
-    object-fit: cover;
-    object-position: center center;
-
-    border-radius: 17px;
-    background: #071d28;
-
-    transform: scale(1.01);
-    transition: transform .6s cubic-bezier(.2, .8, .2, 1);
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    border-radius: 20px !important;
+    filter: none !important;
+    display: block !important;
 }
 
-.hero-visual .orbit-card:hover .orbit-card-image img {
-    transform: scale(1.08);
+/* Slight image zoom while visible */
+.hero-visual .profile-image::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 52%, rgba(0,10,18,.28) 100%) !important;
 }
 
-/* Project title */
-.hero-visual .orbit-card span {
-    position: absolute;
-    left: 16px;
-    right: 16px;
-    bottom: 14px;
-
-    z-index: 5;
-
-    margin: 0 !important;
-
-    font-size: 15px;
-    line-height: 1.2;
-    font-weight: 700;
-    color: #ffffff;
-
-    text-align: left;
-
-    text-shadow:
-        0 2px 12px rgba(0, 0, 0, 0.85),
-        0 0 8px rgba(0, 225, 210, 0.15);
+/* Make old project cards invisible in hero */
+.hero-visual .orbit-card {
+    display: none !important;
 }
 
-/* Small number/badge effect if the HTML contains one */
-.hero-visual .orbit-card .project-number,
-.hero-visual .orbit-card .number {
-    position: absolute;
-    top: 12px;
-    right: 14px;
-    z-index: 6;
-
-    font-size: 12px;
-    font-weight: 800;
-    color: #42e8ff;
-    letter-spacing: 1px;
-}
-
-/* =========================================================
-   RESPONSIVE — 1300px
-========================================================= */
-
-@media (max-width: 1300px) {
-    .hero {
-        grid-template-columns:
-            minmax(330px, .9fr)
-            minmax(520px, 1.1fr);
-    }
-
-    .hero-visual {
-        width: min(620px, 100%);
-        min-height: 455px;
-        gap: 15px;
-    }
-}
-
-/* =========================================================
-   RESPONSIVE — 1100px
-========================================================= */
-
+/* Responsive */
 @media (max-width: 1100px) {
     .hero {
-        grid-template-columns: 1fr 1fr;
-        gap: 18px;
+        grid-template-columns: minmax(0, 1fr) minmax(420px, .8fr) !important;
+        gap: 20px !important;
     }
 
     .hero-visual {
-        width: 100%;
-        min-height: 420px;
-        gap: 13px;
+        width: 390px !important;
+        height: 390px !important;
+        min-height: 390px !important;
     }
 
-    .hero-visual .orbit-card {
-        border-radius: 15px;
-    }
-
-    .hero-visual .orbit-card span {
-        left: 12px;
-        right: 12px;
-        bottom: 11px;
-        font-size: 13px;
+    .hero-visual .profile-area {
+        width: 320px !important;
+        height: 320px !important;
+        min-width: 320px !important;
+        min-height: 320px !important;
+        max-width: 320px !important;
+        max-height: 320px !important;
     }
 }
-
-/* =========================================================
-   RESPONSIVE — 900px
-========================================================= */
 
 @media (max-width: 900px) {
     .hero {
-        grid-template-columns: 1fr;
-        gap: 45px;
+        grid-template-columns: 1fr !important;
+        padding-top: 130px !important;
+    }
+
+    .hero-content {
+        text-align: center !important;
+    }
+
+    .hero-greeting,
+    .hero-buttons,
+    .social-icons {
+        justify-content: center !important;
+    }
+
+    .hero-description {
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
     .hero-visual {
-        width: min(700px, 100%);
-        min-height: 0;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-template-rows: repeat(2, minmax(0, 1fr));
-        gap: 16px;
-        padding: 5px;
+        width: 380px !important;
+        height: 380px !important;
+        min-height: 380px !important;
+        margin-top: 10px !important;
+    }
+
+    .hero-visual .profile-area {
+        width: 310px !important;
+        height: 310px !important;
+        min-width: 310px !important;
+        min-height: 310px !important;
+        max-width: 310px !important;
+        max-height: 310px !important;
     }
 }
 
-/* =========================================================
-   RESPONSIVE — 650px
-========================================================= */
+@media (max-width: 520px) {
+    .hero {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
 
-@media (max-width: 650px) {
     .hero-visual {
-        width: 100%;
-        min-height: 0;
-
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-
-        gap: 12px;
-        padding: 2px;
+        width: 100% !important;
+        height: 320px !important;
+        min-height: 320px !important;
     }
 
-    .hero-visual .orbit-card {
-        aspect-ratio: 1 / 1;
-        border-radius: 14px;
+    .hero-visual .profile-area {
+        width: 260px !important;
+        height: 260px !important;
+        min-width: 260px !important;
+        min-height: 260px !important;
+        max-width: 260px !important;
+        max-height: 260px !important;
+        border-radius: 18px !important;
     }
 
-    .hero-visual .orbit-card-image,
-    .hero-visual .orbit-card-image img {
-        border-radius: 13px;
+    .hero-visual .profile-slider,
+    .hero-visual .profile-image,
+    .hero-visual .profile-image img {
+        border-radius: 17px !important;
     }
 
-    .hero-visual .orbit-card span {
-        left: 10px;
-        right: 10px;
-        bottom: 9px;
-        font-size: 12px;
-    }
-
-    .hero-visual .orbit-card::before {
-        left: 12px;
-        right: 12px;
+    .hero-content h1 {
+        letter-spacing: -2px !important;
     }
 }
-
-/* =========================================================
-   RESPONSIVE — 430px
-========================================================= */
-
-@media (max-width: 430px) {
-    .hero-visual {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 9px;
-    }
-
-    .hero-visual .orbit-card {
-        border-radius: 12px;
-    }
-
-    .hero-visual .orbit-card span {
-        left: 8px;
-        right: 8px;
-        bottom: 8px;
-        font-size: 10px;
-    }
-}
-
-/* =========================================================
-   ACCESSIBILITY — REDUCED MOTION
-========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
     .hero-visual,
-    .hero-visual .orbit-card,
-    .hero-visual .orbit-card-image img {
+    .hero-visual .profile-image {
         animation: none !important;
-        transition: none !important;
     }
 
-    .hero-visual,
-    .hero-visual .orbit-card {
+    .hero-visual {
         opacity: 1 !important;
         transform: none !important;
     }
-}
 
-/* =========================================================
-   LIGHT MODE — SQUARE PROJECT CARDS
-========================================================= */
-
-body.light-mode .hero-visual .orbit-card {
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.92),
-            rgba(235, 252, 252, 0.88)
-        );
-
-    border-color: rgba(0, 130, 145, 0.22);
-
-    box-shadow:
-        0 12px 30px rgba(0, 90, 100, 0.10);
-}
-
-body.light-mode .hero-visual .orbit-card span {
-    color: #073b43;
-    text-shadow:
-        0 2px 8px rgba(255, 255, 255, 0.9);
+    .hero-visual .profile-image:first-child {
+        opacity: 1 !important;
+        transform: translateX(0) !important;
+    }
 }
