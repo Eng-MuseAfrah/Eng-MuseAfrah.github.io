@@ -2747,3 +2747,300 @@ body.light-mode .featured-project-content p {
         scroll-behavior: auto !important;
     }
 }
+
+
+/* =========================================================
+   FINAL IMAGE SIZE LOCK
+   - Keeps the exact desktop proportions of the reference design
+   - Does NOT change any colors
+   - Prevents real images from changing card spacing/sizes
+========================================================= */
+
+.hero-visual {
+    width: 700px;
+    height: 700px;
+    min-width: 700px;
+    min-height: 700px;
+    max-width: 700px;
+    flex: 0 0 700px;
+}
+
+.profile-area {
+    width: 430px;
+    height: 430px;
+    min-width: 430px;
+    min-height: 430px;
+    flex: 0 0 430px;
+}
+
+.profile-slider {
+    width: calc(100% - 14px);
+    height: calc(100% - 14px);
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+}
+
+.profile-image img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    min-width: 0;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.orbit {
+    flex-shrink: 0;
+}
+
+.orbit-card {
+    width: 145px !important;
+    min-width: 145px !important;
+    max-width: 145px !important;
+    flex: 0 0 145px;
+    box-sizing: border-box;
+}
+
+.orbit-card-image {
+    width: 145px !important;
+    min-width: 145px !important;
+    max-width: 145px !important;
+    height: 100px !important;
+    min-height: 100px !important;
+    max-height: 100px !important;
+    box-sizing: border-box;
+    flex: 0 0 145px;
+}
+
+.orbit-card-image img {
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: center center;
+    display: block;
+}
+
+/* Keep the six project cards inside the same 700px reference area */
+.orbit-dashboard {
+    top: 25px;
+    left: 20px;
+}
+
+.orbit-mobile {
+    top: 25px;
+    right: 20px;
+}
+
+.orbit-website {
+    top: 270px;
+    left: 0;
+}
+
+.orbit-ecommerce {
+    top: 275px;
+    right: 0;
+}
+
+.orbit-webapp {
+    bottom: 10px;
+    left: 25px;
+}
+
+.orbit-uiux {
+    bottom: 10px;
+    right: 25px;
+}
+
+
+/* =========================================================
+   DESKTOP REFERENCE SIZE
+========================================================= */
+
+@media (min-width: 1301px) {
+
+    .hero {
+        grid-template-columns:
+            minmax(0, 1fr)
+            700px;
+        gap: 0;
+    }
+
+    .hero-visual {
+        width: 700px;
+        height: 700px;
+        min-width: 700px;
+        max-width: 700px;
+    }
+
+    .orbit-outer {
+        width: 680px;
+        height: 680px;
+    }
+
+    .orbit-middle {
+        width: 570px;
+        height: 570px;
+    }
+
+    .orbit-inner {
+        width: 480px;
+        height: 480px;
+    }
+
+    .profile-area {
+        width: 430px;
+        height: 430px;
+    }
+
+    .orbit-card {
+        width: 145px !important;
+        min-width: 145px !important;
+        max-width: 145px !important;
+    }
+
+    .orbit-card-image {
+        width: 145px !important;
+        height: 100px !important;
+        min-width: 145px !important;
+        max-width: 145px !important;
+        min-height: 100px !important;
+        max-height: 100px !important;
+    }
+}
+
+
+/* =========================================================
+   KEEP ORIGINAL RESPONSIVE SIZES
+========================================================= */
+
+@media (max-width: 1300px) and (min-width: 1101px) {
+
+    .hero-visual {
+        width: 620px;
+        height: 620px;
+        min-width: 620px;
+        max-width: 620px;
+        flex-basis: 620px;
+    }
+
+    .profile-area {
+        width: 390px;
+        height: 390px;
+        min-width: 390px;
+        min-height: 390px;
+        flex-basis: 390px;
+    }
+
+    .orbit-card {
+        width: 145px !important;
+        min-width: 145px !important;
+        max-width: 145px !important;
+    }
+
+    .orbit-card-image {
+        width: 145px !important;
+        height: 100px !important;
+        min-width: 145px !important;
+        max-width: 145px !important;
+        min-height: 100px !important;
+        max-height: 100px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE IMAGE SIZE LOCK
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .hero-visual {
+        width: 500px;
+        height: 500px;
+        min-width: 500px;
+        min-height: 500px;
+        max-width: 500px;
+        flex-basis: 500px;
+    }
+
+    .profile-area {
+        width: 320px;
+        height: 320px;
+        min-width: 320px;
+        min-height: 320px;
+        flex-basis: 320px;
+    }
+
+    .orbit-card {
+        width: 110px !important;
+        min-width: 110px !important;
+        max-width: 110px !important;
+        flex-basis: 110px;
+    }
+
+    .orbit-card-image {
+        width: 110px !important;
+        height: 75px !important;
+        min-width: 110px !important;
+        max-width: 110px !important;
+        min-height: 75px !important;
+        max-height: 75px !important;
+        flex-basis: 110px;
+    }
+
+    .orbit-card-image img {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        max-height: none !important;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    .hero-visual {
+        width: 420px;
+        height: 420px;
+        min-width: 420px;
+        min-height: 420px;
+        max-width: 420px;
+        flex-basis: 420px;
+    }
+
+    .profile-area {
+        width: 270px;
+        height: 270px;
+        min-width: 270px;
+        min-height: 270px;
+        flex-basis: 270px;
+    }
+
+    .orbit-card {
+        width: 90px !important;
+        min-width: 90px !important;
+        max-width: 90px !important;
+        flex-basis: 90px;
+    }
+
+    .orbit-card-image {
+        width: 90px !important;
+        height: 62px !important;
+        min-width: 90px !important;
+        max-width: 90px !important;
+        min-height: 62px !important;
+        max-height: 62px !important;
+        flex-basis: 90px;
+    }
+}
