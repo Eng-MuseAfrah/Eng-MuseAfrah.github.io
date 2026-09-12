@@ -503,11 +503,11 @@ animation: wave 2.5s infinite;
 }
 
 .hero h1 {
-font-size: clamp(3.4rem, 6vw, 6rem);
-line-height: 1.05;
-letter-spacing: -4px;
-font-weight: 800;
-margin-bottom: 16px;
+    font-size: clamp(3.2rem, 5.4vw, 5.2rem);
+    line-height: 1.05;
+    letter-spacing: -4px;
+    font-weight: 800;
+    margin-bottom: 16px;
 }
 
 .hero h1 span {
@@ -664,8 +664,8 @@ place-items: center;
 }
 
 .profile-area {
-width: 370px;
-height: 370px;
+width: 340px;
+height: 340px;
 position: relative;
 
 ```
@@ -732,8 +732,8 @@ PROFILE SLIDER
 
 .profile-slider {
 position: relative;
-width: 345px;
-height: 345px;
+width: 340px;
+height: 340px;
 border-radius: 50%;
 overflow: hidden;
 z-index: 2;
